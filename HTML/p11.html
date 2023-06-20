@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>FORM</title>
+    </head>
+    <body>
+        <center>
+            <h1>HTML FORM TAG..!</h1>
+        </center>
+
+        <hr>
+
+        <h3>Default Form..!</h3>
+        <form action="" method="post">
+            <button type="button">CANCEL</button>
+            <button type="reset">RESET</button>
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <hr>
+
+        <h2>TestCase Form..!</h2>
+        <form autocomplete="off">
+            <input type="text" placeholder="Frist Name" name="firstName" id="firstName" value="HTML" readonly required>
+            <input type="text" placeholder="Middle Name" name="middleName" id="middleName" required>
+            <input type="text" placeholder="Last Name" name="lastName" id="lastName" required>
+
+            <button type="button">CANCEL</button>
+            <button type="reset">RESET</button>
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <hr>
+
+        <h3>Form Components..!</h3>
+
+        <form>
+            <fieldset>
+                <legend>First Name</legend>
+                <label for="">Enter First Name:</label>
+                <input type="text" placeholder="Frist Name" name="firstName" id="firstName" value="HTML" readonly required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Middle Name</legend>
+                <label for="">Enter Middle Name:</label>
+                <input type="text" placeholder="Middle Name" name="middleName" id="middleName" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Last Name</legend>
+                <label for="">Enter Last Name:</label>
+                <input type="text" placeholder="Last Name" name="lastName" id="lastName" required>
+            </fieldset>
+           
+            <fieldset disabled="disabled">
+                <legend>Buttons</legend>
+                <button type="button">CANCEL</button>
+                <button type="reset">RESET</button>
+                <button type="submit">SUBMIT</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Buttons</legend>
+                <label for="">Input Type Is Button:</label>
+                <input type="button" value="BUTTON">
+            </fieldset>
+
+            <fieldset>
+                <legend>CheckBox</legend>
+                <p for="">Input type is CheckBox, Is used for select more than one option.</p>
+
+                <h3>Langauges</h3>
+                
+                <label for="">Kannada:</label>
+                <input type="checkbox" value="Kannada" name="kannada" id="kannada">
+
+                <label for="">English:</label>
+                <input type="checkbox" value="English" name="english" id="english">
+
+                <label for="">Hindi:</label>
+                <input type="checkbox" value="Hindi" name="hindi" id="hindi">
+            </fieldset>
+
+            <fieldset>
+                <legend>Color</legend>
+                <label for="">Input type is Color:</label>
+                <input type="color" name="color" id="color">
+            </fieldset>
+
+            <fieldset>
+                <legend>Date</legend>
+                <label for="">Input Type is date:</label>
+                <input type="date" name="date" id="date">
+            </fieldset>
+
+            <fieldset>
+                <legend>DateTime</legend>
+                <label for="">Input Type is DateTime:</label>
+                <input type="datetime" placeholder="Date and Time" name="datetime" id="datetime">
+            </fieldset>
+            
+        </form>
+
+
+    </body>
+</html>

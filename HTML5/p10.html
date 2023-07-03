@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-5</title>
+</head>
+<body>
+    <center>
+        <h1>This is CANVAS TAG</h1>
+        <p>The HTML canvas elament provides HTML a bitmaps surface to work with.
+            It is used to draw graphics on the web page.
+            the <b> HTML 5 canvas Tag</b> is used to draw graphics using scripting langauge like javascript.
+        </p>
+    </center>
+
+    <hr>
+
+    <canvas>This is First Canvas tag</canvas>
+    <canvas id="myCanvas2" width="300px" height="100px" style="border: 2px solid red;"></canvas>
+    <p><b>Note: It is always necessary to specify the id attribute and the height and width attribute to define the size of the canvas. you can have multiple canvas elements on one HTML page.</b></p>
+
+    <hr>
+
+    <center>
+        <h3>Draving a React Angle on Canvas</h3>
+    </center>
+
+    <canvas id="canvasRect" width="250px" height="150px" style="border: 1px solid blue;"></canvas>
+    <script>
+        let canvas2 = document.getElementById("canvasRect").getContext("2d");
+        canvas2.fillStyle="red";
+        canvas2.fillRect(25,25,200,100)
+    </script>
+
+    <hr>
+
+    <center>
+        <h3>Drawing Circle on Canvas</h3>
+    </center>
+    <canvas id="myCanvasCircle" width="200" height="200" style="border: 1px solid green;" ></canvas>
+    <script>
+        let myCanvasCircle = document.getElementById("myCanvasCircle").getContext("2d");
+        myCanvasCircle.fillStyle = "blue";
+        myCanvasCircle.arc(100,100,95,0,2*3.142);
+        myCanvasCircle.fill();
+    </script>
+
+    <hr>
+
+    <center>
+        <h3>Drawing Text on Canvas</h3>
+    </center>
+    <canvas id="canvasText" width="578" height="200" style="border: 1px solid teal;"></canvas>
+    <script>
+        let canvasText = document.getElementById("canvasText").getContext("2d");
+        canvasText.font = "20pt Times New Roman";
+        canvasText.fillStyle = "black";
+        canvasText.fillText("WELCOME TO CANVAS..!", 125, 100);
+    </script>
+
+</body>
+</html>

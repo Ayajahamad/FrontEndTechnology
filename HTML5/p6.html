@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-5</title>
+
+    <style>
+        dialog{
+            /* display: block; */
+            background-color: grey;
+            margin: 20px;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <h3>DETAILS TAG</h3>
+        <p>This tag is used to specify the additional details on the web page that the user can view or hide on demand.</p>
+    </center>
+
+    <hr>
+
+    <center>
+        <h3>This is Summary</h3>
+        <p>The <b>HTML SUMMARY</b> tg is used with <b>DETAILS</b> tag. It is used as a summary, caption or legend for the content of a details element.</p>
+    </center>
+
+    <hr>
+
+    <details>
+        <summary>HTML</summary>
+        <h1>HTML</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus ducimus est, cumque velit fugiat! Rem nihil, iusto animi quas, impedit quis laudantium commodi dolorem omnis magni vitae non magnam.</p>
+    </details>
+    <details>
+        <summary>CSS</summary>
+        <h1>CSS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus ducimus est, cumque velit fugiat! Rem nihil, iusto animi quas, impedit quis laudantium commodi dolorem omnis magni vitae non magnam.</p>
+    </details>
+    <details>
+        <summary>JS</summary>
+        <h1>JS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus ducimus est, cumque velit fugiat! Rem nihil, iusto animi quas, impedit quis laudantium commodi dolorem omnis magni vitae non magnam.</p>
+    </details>
+
+    <hr>
+
+    <center>
+        <h3>TIME TAG..!</h3>
+        <p><b>HTML Time</b> tag is used to define the date and time. It displays time value in a 24 hour clock or a precious date in a Gregorian calender in HTML</p>
+    </center>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quidem debitis ratione adipisci dolores fuga exercitationem corporis eos iste quisquam sequi error distinctio in a tenetur, 3:30 hic, aperiam repudiandae voluptatem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eligendi voluptatum nihil quia quisquam, exercitationem dolor porro natus cumque iste quo velit, <time>3:30</time> neque doloremque, animi esse illo ducimus ab impedit!</p>
+
+    <hr>
+
+    <center>
+        <h3>This is DIALOG TAG</h3>
+        <p><b>(This tag to create a new pop-up dialog on a web page.)</b></p>
+    </center>
+
+    <hr>
+
+    <button type="button" id="openDialog">Open Dialog</button>
+
+    <dialog id="dialogID">
+        <button type="button" id="closedialog">&times;</button>
+        <h1>FILLSTACK..!</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam magni, illum aut consectetur odit quas? Placeat, quis velit. Commodi, alias. Culpa fugiat enim consectetur cupiditate deserunt veniam asperiores doloribus iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam saepe tenetur ratione quas similique blanditiis nulla doloribus atque? Nulla aut velit sequi. Vitae ad maiores cupiditate soluta rem nemo!</p>
+    </dialog>
+
+    <script>
+        document.getElementById("openDialog").onclick=
+            function(){
+                document.getElementById("dialogID").show();
+            };
+
+            document.getElementById("closedialog").onclick=
+            function(){
+                document.getElementById("dialogID").close();
+            }; 
+    </script>
+</body>
+</html>

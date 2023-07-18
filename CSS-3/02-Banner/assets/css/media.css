@@ -1,0 +1,49 @@
+/* MOBILE */
+@media(max-width:768px){
+    header{
+        background-color: rgb(0, 255, 17);
+    }
+    header>nav>ul>li{
+        display: block;
+    }
+    header>nav>ul{
+        float: none;
+    }
+    header>nav{
+        padding: 20px;
+        text-align: center;
+    }
+    .banner1{
+        background-color: gray;
+    }
+    .banner2{
+        background-image: url(../images/mobile.jpg);
+    }
+    .banner3{
+        background: linear-gradient(orange, blue ,green);
+    }
+
+}
+
+/* TAB */
+@media(min-width:769px) and (max-width:1024px){
+    header{
+        background-color: rgb(255, 0, 174);
+    }
+    header>nav>ul{
+        float: none;
+    }
+    header>nav{
+        padding: 20px;
+        text-align: center;
+    }
+    .banner1{
+        background-color: skyblue;
+    }
+    .banner2{
+        background-image: url(../images/tab.jpg);
+    }
+    .banner3{
+        background: linear-gradient(50deg,green, orange, blue);
+    }
+}

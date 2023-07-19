@@ -77,3 +77,48 @@ header>nav>ul>li:hover a{
     background: url(../images/pc.jpg) no-repeat left,url(../images/pc.jpg) no-repeat right, url(../images/img1.jpg)no-repeat center ;
     background-size: 40%;
 }
+
+/* P7.HTML */
+.banner6{
+    background: linear-gradient(rgba(255, 165, 0,0.6),rgba(255, 255, 255,0.6),rgba(0, 128, 0,0.6)) ,url(../images/tab.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* P8.HTML*/
+/* .banner7>video{
+    
+}  */
+
+/* P9.HTML */
+.banner8{
+    background: -o-linear-gradient(black,green); /*Opera Browser*/
+    background: -moz-linear-gradient(black,red);
+    background: -webkit-linear-gradient(yellow,red);
+    background: linear-gradient(orange,white,green);
+}
+
+/* P10.HTML */
+.banner9{
+    background-color: #808080;
+    text-align: left;
+    line-height: 2;
+}
+.common{
+    height: 400px;
+    width: 300px;
+    border: 2px solid #ccc;
+    margin: 30px;
+    padding: 30px;
+}
+.example-1{
+    background: radial-gradient(orange,white,green);
+}
+.example-2{
+    background: radial-gradient(circle,orange,white,green);
+}
+.example-3{
+    background: radial-gradient(circle farthest-side at left bottom, orange,white,green);
+}
+.example-4{
+    background: repeating-linear-gradient(orange,white 10%,green 20%);
+}

@@ -1,0 +1,40 @@
+.main{
+    background-color: white;
+    background-color: aqua;
+}
+.card{
+    width: 250px;
+    background: linear-gradient(135deg, rgb(240, 62, 157), rgb(203, 144, 238), darkblue);
+    text-align: center;
+    border-radius: 50px 50px 170px 170px;
+    height: 340px;
+    padding: 20px;
+    color: aliceblue;
+    z-index: 1;
+    border-bottom: 10px solid rgb(185, 69, 239);
+
+}
+.card>.child>h1{
+    margin: 15px;
+    padding: 10px;
+}
+.card>img{
+    background-color: aqua;
+    height: 80px;
+    margin-top: -50px;
+    border-bottom: 6px solid white;
+    border-radius: 0 0 100px 100px;
+    padding: 20px;
+
+}
+section{
+    background-color: rgb(255, 255, 255);
+    margin: 50px;
+    width: 290px;
+    border-radius: 45px 45px 150px 150px;
+    height: 400px;
+    border-bottom: 20px solid rgb(193, 234, 247);
+}
+#inline{
+    display: inline-block;
+} 

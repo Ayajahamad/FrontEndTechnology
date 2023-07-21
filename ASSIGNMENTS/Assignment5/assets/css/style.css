@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header{
+    background-color: aqua;
+}
+header>nav>img{
+    height: 64px;
+}
+header>nav>ul{
+    list-style-type: none;
+    float: right;
+}
+header>nav>ul>li{
+    display: inline-block;
+    padding: 25px;   
+}
+header>nav>ul>li:hover{
+    background-color: white;
+}
+header>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+header>nav>ul>li:hover a{
+    color: blue;
+    font-size: 20px;
+}
+
+.commonBanner{
+    height: 400px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.commonBanner>div{
+    background-color: rgba(0,0,0,0.3);
+    padding: 30px;
+    line-height: 2;
+    display: inline-block;
+    box-shadow: -3px -3px 3px #000 , 3px 3px 3px #000;
+}
+.commonBanner>div>h1{
+    font-size: 60px;
+    text-shadow: -3px -3px 3px #000 , 3px 3px 3px #000;
+}
+.banner1{
+    background-image: url(../images/singleimg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

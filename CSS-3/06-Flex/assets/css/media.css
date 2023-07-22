@@ -1,0 +1,17 @@
+/* MOBILE VERSION */
+@media(max-width:768px){
+    .container{
+        flex-flow: column;
+    }
+    .container>.item{
+        width: 100%;
+    }
+}
+
+
+/* TABLET VERSION */
+@media(min-width:769px) and (max-width:1200px){
+    .container>.item{
+        width: 44%;
+    }
+}

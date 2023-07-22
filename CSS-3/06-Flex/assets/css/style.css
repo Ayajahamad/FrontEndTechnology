@@ -1,0 +1,124 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* P2.HTML */
+.container{
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+
+    /* flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; */
+
+    /* flex-wrap: wrap; */
+
+    flex-flow: row wrap;
+
+    /* column-gap: 20px;
+    row-gap: 20px; */
+
+    gap: 20px 20px;
+}
+.container>.item{
+    background-color: gray;
+    /* padding: 20px;
+    margin: 20px; */
+    width: 28.33%;
+    padding: 20px
+}
+
+/* P3.HTML */
+.container1{
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+/* P4.HTML */
+.container2{
+    height: 400px;
+
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: start;
+    align-items: end;
+    align-items: center;
+
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: start;
+    align-content: end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+}
+.container2.item{
+    height: 50px;
+}
+/* P5.HTML */
+.container3>.item{
+    width: 200px;
+    height: 100px;
+    flex-grow: 1;
+    flex: 1;
+}
+.container3>.item:first-child{
+    flex: 2;
+}
+.container3>.item:last-child{
+    flex: 3;
+}
+
+/* P6.HTMl */
+.container4{
+    flex-wrap: nowrap;
+}
+.container4>.item{
+    flex-shrink: 1;
+}
+.container4>.item:first-child{
+    flex-shrink: 5;
+}
+.container4>.item:last-child{
+    flex-shrink: 9;
+}
+
+/* P7.HTML */
+.container5>.item:first-child{
+    order: 3;
+}
+.container5>.item:nth-child(2){
+    order: 1;
+}
+.container5>.item:last-child{
+    order: 2;
+}
+
+/* P8.HTML */
+.container6{
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    /* align-items: baseline; */
+}
+.container6>.item:first-child{
+    font-size: 20px;
+    align-self: flex-start;
+}
+.container6>.item:nth-child(2){
+    font-size: 30px;
+}
+.container6>.item:last-child{
+    font-size: 30px;
+    align-self: flex-end;
+}

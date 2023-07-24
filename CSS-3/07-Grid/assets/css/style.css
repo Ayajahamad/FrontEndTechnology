@@ -1,0 +1,118 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+/* P1.HTML */
+.container{
+    background-color: lightgrey;
+    padding: 20px;
+
+    display: grid;
+    gap: 20px;
+
+    /* grid-template-rows: 200px; */
+    grid-auto-rows: auto;
+
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+}
+.container>.item{
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+/* P2.html & P3.HTML*/
+.card{
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.card>img, .item1>img{
+    width: 100%;
+}
+.card>article{
+    text-align: justify;
+    line-height: 2;
+}
+.card>button, .item2>button{
+    padding: 20px;
+    background-color: gray;
+    color: white;
+    width: 100%;
+}
+
+/* P3.HTML */
+.item1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.item2{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.item3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/* P4.HTML */
+#p4>.item:first-child{
+    grid-row-start: 1;
+    grid-row-end: span 5;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+/* P5.HTML */
+.container>header,.container>article,.container>aside,.container>footer{
+    background-color: brown;
+    padding: 20px;
+    color: #fff;
+    text-align: justify;
+    line-height: 2;
+}
+.container>header{
+    text-shadow: 3px 3px 5px #000;
+    font-size: 20px;
+    grid-area: header;
+}
+.container>footer{
+    text-align: center;
+    font-size: 20px;
+    grid-area: footer;
+}
+.container>article{
+    grid-area: article;
+}
+.container>#left{
+    grid-area: left;
+}
+.container>#right{
+    grid-area: right;
+}
+#project{
+    grid-auto-rows: 100px 1fr 100px;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-areas: "header header header" "left article right" "left footer footer";
+}
+/* P6.HTML */
+.gallery>img{
+    max-width: 100%;
+}
+.gallery>img:nth-child(odd){
+    grid-column: span 2;
+    grid-row: span 3;
+}
+.gallery{
+    grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+}

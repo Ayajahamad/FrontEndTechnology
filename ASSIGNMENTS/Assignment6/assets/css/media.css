@@ -1,0 +1,20 @@
+@media(max-width:768px){
+    .container>.first{
+        position: relative;
+        width: 100%;
+    }
+    .container>.second{
+        margin: 0 0 20px 20px;
+        width: 100%;
+        overflow: scroll;
+    }
+
+}
+@media(min-width:769px) and (max-width:1024px){
+    .container>.first{
+        width: 150px;
+    }
+    .container>.second{
+        width: 650px;
+    }
+}

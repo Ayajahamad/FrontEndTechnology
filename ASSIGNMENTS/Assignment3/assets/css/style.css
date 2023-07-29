@@ -10,20 +10,18 @@ background-color: lightgreen;
 background: white;
 width: 300px;
 height: 400px;
-margin: 30px;
+margin: 30px 30px 30px 500px;
 position: relative;
 border-radius: 20px;
-margin-left: 500px;
-margin-top: 20px;
 }
 .first{
     padding-top: 30px;
     background-color: #12B886;
     width: 95%;
-    margin-left: 9px;
+    margin-left: 8px;
     text-align: center;
     position: absolute;
-    top: -25px;
+    top: -20px;
     border-radius: 20px;
     height: 130px;
     color: white;
@@ -32,15 +30,16 @@ margin-top: 20px;
     background-color: white;
     border-radius: 100px;
     height: 50px;
-    padding: 5px;
+    padding: 9px;
 }
 .second{
-    padding: 10px;
+    padding: 5px;
     width: 80%;
     position: absolute;
-    height: 150px;
-    top: 140px;
+    height: 155px;
+    top: 155px;
     color: #12B886;
+    left: -6px;
 }
 .second img{
 height: 30px;
@@ -71,7 +70,7 @@ text-align: center;
 /* p2.HTML */
 .double{
     background-color: aqua;
-    margin: 100px;
+    margin: 50px;
 }
 .top1{
     background-color: white;
@@ -104,7 +103,7 @@ text-align: center;
     padding: 5px;
     border-radius: 15px;
     width: 100px;
-    margin-top: 30px;
+    margin-top: 36px;
 }
 #top1{
 display: inline-block;
@@ -142,7 +141,7 @@ display: inline-block;
     padding: 5px;
     border-radius: 15px;
     width: 100px;
-    margin-top: 30px;
+    margin-top: 36px;
 }
 .top3{
     background-color: white;
@@ -177,7 +176,7 @@ display: inline-block;
     padding: 5px;
     border-radius: 15px;
     width: 100px;
-    margin-top: 30px;
+    margin-top: 36px;
 }
 .top4{
     background-color: white;
@@ -212,13 +211,13 @@ display: inline-block;
     padding: 5px;
     border-radius: 15px;
     width: 100px;
-    margin-top: 30px;
+    margin-top: 36px;
 }
 
 /* p3.HTML */
 .third1{
     background-color: pink;
-    margin: 150px 150px 150px 300px;
+    margin: 100px 150px 100px 200px;
     width: 790px;
 }
 .parent1{

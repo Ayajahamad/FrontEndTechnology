@@ -1,0 +1,517 @@
+
+/* HEADER CODE */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+ .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.nav{
+    display: flex;
+    background-color: rgba(46, 45, 44, 0.2);
+    padding: 0 20px 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav>img{
+    height: 68px;
+}
+.nav>nav>ul{
+    list-style: none;
+}
+.nav>nav>ul>li{
+    background-color: rgb(5, 4, 45);
+    padding: 20px;
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.nav>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+.nav>nav>ul>li:hover{
+    background-color: white;
+}
+.nav>nav>ul>li:hover a{
+    color: black;
+}
+.nav>h1{
+    background-color: white;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid rgb(33, 38, 36);
+    box-shadow: -3px -3px 4px rgb(33, 38, 36),3px 3px 2px rgb(33, 38, 36);
+}
+
+/* BANNER 1 CODE */
+
+.bannerHome{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+    align-items: center;
+    background: url(../images/morning.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.dbtn1{
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: aqua;
+    color: black;
+    border-radius: 10px;
+    margin: 30px;
+}
+.btn1{
+  width: 200px;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: aqua;
+  color: black;
+  border-radius: 10px;
+}
+.btn:hover{
+    background-color: white;
+}
+#dialogID{
+    margin: 300px 20px 0px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid red;
+    align-items: center ;
+}
+.bannerHome>div{
+    margin: 40px;
+    top: 30px;
+    left: 30px;
+    color: white;
+    width: 40%;
+    padding: 30px;
+    transition: 3s ease-in-out;
+    line-height: 1;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgba(46, 45, 44, 0.2);
+    box-shadow: -3px -3px 4px rgb(217, 222, 220),3px 3px 2px rgb(187, 195, 192);
+}
+.bannerHome>div>h1{
+    color: rgb(5, 4, 45);
+    background-color: white;
+    text-align: center;
+    border-radius: 10PX;
+}
+.bannerHome>div>hr{
+    margin: 10px 0 10px 0;
+}
+.bannerHome div:hover {
+    transform: scale(1.1);  
+}
+
+/* ANIMATION CODE */
+.bannerHome{
+    animation: imagechange 10s infinite;
+}
+
+@keyframes imagechange {
+    from{
+        background: url(../images/morning.jpeg) no-repeat center; 
+        background-size: cover;
+    }
+    to{
+        background: url(../images/night.jpeg) no-repeat center;
+        background-size: cover;
+    }
+}
+
+/* EXPLORE PAGE CODE */
+.animation{
+    background-color: rgb(17, 12, 45);
+    display: inline-block;
+    width: 100%;
+    color: white;
+}
+.text{
+    /* background-color: aqua; */
+    margin-left: 10px;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: monospace;
+    border-right: 5px solid rgb(17, 12, 45) ;
+    width: 700px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20), cursor .4s step-end infinite alternate;
+}
+.text1{
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: monospace;
+    border-right: 5px solid rgb(17, 12, 45);
+    width: 900px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(20), cursor .10s  infinite;
+    text-align: right;
+}
+@keyframes cursor {
+    50% {border-color: rgb(17, 12, 45)}
+}
+@keyframes typing {
+    from{width: 10px;}
+}
+
+.exBanner{
+    background: url(../images/pic1.jpeg) no-repeat center;
+    background-size: cover ;
+    animation: eximagechange 10s infinite;
+    height: 100vh;
+}
+@keyframes eximagechange {
+    10%{
+        background: url(../images/pic1.jpeg) no-repeat center; 
+        background-size: cover;
+    }
+    20%{
+        background: url(../images/pic2.jpeg) no-repeat center;
+        background-size: cover;
+    }
+    30%{
+        background: url(../images/pic3.jpeg) no-repeat center; 
+        background-size: cover;
+    }
+    40%{
+        background: url(../images/pic4.jpeg) no-repeat center;
+        background-size: cover;
+    }
+    50%{
+        background: url(../images/pic6.jpeg) no-repeat center; 
+        background-size: cover;
+    }
+    60%{
+        background: url(../images/pic7.jpeg) no-repeat center;
+        background-size: cover;
+    }
+    70%{
+        background: url(../images/pic8.jpeg) no-repeat center; 
+        background-size: cover;
+    }
+    80%{
+        background: url(../images/pic9.jpeg) no-repeat center;
+        background-size: cover;
+    }
+    90%{
+        background: url(../images/pic10.jpeg) no-repeat center;
+        background-size: cover;
+    }
+    100%{
+        background: url(../images/pic11.jpeg) no-repeat center;
+        background-size: cover;
+    }
+}
+
+/* Explore gallery */
+.exBanner1{
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+.exBanner1>div>{
+    margin: 20px;
+    margin-top: 20px
+}
+.exBanner1>div>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* BESTERARY PAGE CODE */
+.bstheading{
+    padding: 20px;
+    text-align: center;
+}
+.cell{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: 15px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    justify-content: center;
+    height: 335px;
+    background-color: rgb(231, 237, 241);
+    align-items: center;
+}
+.cell img{
+    margin: 15px;
+    width: 70%;
+    height: 60%;
+    align-items: center;
+    border: 1px solid #000;
+}
+.cell h2{
+    text-align: center;
+}
+.cell p{
+    text-align: justify;
+    padding: 10px;
+}
+
+/* FOOTER CODE */
+footer{
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    background-color: #121315;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  .row {
+    padding: 2em 1em;
+  }
+  .row.primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  h3 {
+    width: 100%;
+    text-align: left;
+    color: #2a8ded;
+    font-size: 1.6em;
+    white-space: nowrap;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  ul li a:hover {
+    color: #2a8ded;
+  }
+  .about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+  }
+  input,
+  button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  button {
+    background-color: #2a8ded;
+    color: #ffffff;
+  }
+  div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+  }
+  .social i:hover {
+    color: #2a8ded;
+  }
+  .row.secondary {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .row.secondary i {
+    font-size: 1.8em;
+    color: #2a8ded;
+  }
+  .row.secondary div {
+    padding: 1em 0;
+    width: 100%;
+  }
+  .row.secondary div:hover {
+    background-color: #25262e;
+  }
+  .copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+  }
+  .copyright p {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  /* CONTACT PAGE CODE */
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+  .body{
+      background: linear-gradient(90deg, #BE8CEF 0%, rgba(61, 46, 232, 0.83) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Montserrat', sans-serif;
+      font-size:10px;
+      height: 100vh;
+      margin: -20px 0 50px;
+  }
+  
+  .containercont {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
+      position: relative;
+      overflow: hidden;
+      width: 768px;
+      max-width: 100%;
+      min-height: 480px;
+      min-width:370px;
+  }
+  
+  h2 {
+    font-size:2rem;
+    margin-bottom:1rem;
+  }
+  .form-container {
+    display:flex;
+  }
+  
+  .left-container {
+    flex:1;
+    height:480px;
+    background-color:teal;
+  }
+  .right-container {
+    display:flex;
+    flex:1;
+    height:460px;
+    background-color: white;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .left-container {
+    display:flex;
+    flex:1;
+    height:480px;
+    justify-content:center;
+    align-items:center;
+      color:white;
+  }
+  
+  .left-container p {
+    font-size:0.9rem;
+  }
+  
+  .right-inner-container {
+    width:70%;
+    height:80%;
+    text-align:center;
+  }
+  
+  .left-inner-container {
+    height:50%;
+    width:80%;
+    text-align:center;
+    line-height:22px;
+  }
+  
+  input, textarea {
+      background-color: #eee;
+      border: none;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 100%;
+    font-size:0.8rem;
+  }
+  
+  input:focus, textarea:focus{
+    outline:1px solid teal;
+  }
+  
+  .button {
+      border-radius: 20px;
+      border: 1px solid #00b4cf;
+      background-color: #00b4cf;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      cursor:pointer;
+  }
+  
+  button:hover {
+    opacity:0.7;
+  }
+  form p {
+    text-align:left;
+  }
+  
+  /* ABOUT US PAGE CODE */
+  .banner22{
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(18, 18, 45);
+    color: white;
+    transition: 2s ease-in-out;
+}
+.banner22>figure>img{
+    height: 200px;
+    border-radius: 200px;
+    padding: 20px;
+    box-shadow: 3px 3px 2px white,-3px -3px 2px white;
+    transition: 2s ease-in-out;
+}
+.banner22>figure>img:hover{
+    transform: scale(-1);
+}
+.banner22>figure{
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.aboutpage{
+  background-color: rgb(18, 18, 45);
+  text-align: center;
+  line-height: 2;
+  color: white;
+}

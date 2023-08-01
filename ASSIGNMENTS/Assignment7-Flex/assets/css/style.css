@@ -1,0 +1,193 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+header{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+header>img{
+    height: 80px;
+    border-radius: 150px;
+    width: 200px;
+    /* box-shadow: -3px -3px 4px orangered,3px 3px 4px orangered; */
+}
+header>nav>ul{
+    list-style: none;
+}
+header>nav>ul>li{
+    display: inline-block;
+    padding: 10px; 
+}
+header>nav>ul>li>a{
+    color: black;
+}
+header>nav>ul>li:hover{
+    background-color: orange;
+}
+header>nav>ul>li:hover a{
+    color: white;
+}
+header>nav>ul>li>a{
+    text-decoration: none;
+}
+header>nav>ul>li:nth-child(2){
+    border: 2px dotted orange;
+}
+header>nav>ul>li:nth-child(6){
+    border: 2px dotted red;
+}
+.container>img{
+    padding: 20px;
+}
+/* BUTTON CODE */
+.btn{
+    margin: 20px 0 0 0;
+    padding: 10px;
+    box-shadow: -0px -0px 0px orangered,2px 2px 2px orangered;
+}
+.item3>div>.btn,.item5>div>.btn{
+    background-color: orange;
+    border: 1px dotted white;
+    color: white;
+}
+.item3>div>.btn:hover,.item5>div>.btn:hover{
+    background-color: white;
+    color: orange;
+}
+.item2>div>.btn,.item4>div>.btn,.item6>div>.btn{
+    border: 1px dotted red;
+    color: red;
+    background-color: white;
+}
+.item2>div>.btn:hover,.item4>div>.btn:hover,.item6>div>.btn:hover{
+    background-color: orange;
+    color: white;
+}
+.item1{
+    display: flex;
+    background-color: lightgray;
+    margin: 0%;
+    padding: 0%;
+    
+}
+.item1>img{
+    height: 150px;
+    width: 300px;
+    display: inline-block;
+    margin-top: 15px;
+    /* box-shadow: -0px -0px 0px orangered,3px 3px 4px orangered; */
+}
+.item1>h1{
+    align-self: center;
+    font-size: 100px;
+    margin-left: 200px;
+    /* text-shadow: -1px -2px 2px orangered,1px 2px 2px orangered; */
+}
+.item1>h1:hover{
+    text-shadow: -1px -2px 2px orangered,1px 2px 2px orangered;
+    transform: scale(1.3);
+    transition: 2s;
+}
+.item2>div>h1,.item3>div>h1,.item4>div>h1,.item5>div>h1,.item6>div>h1{
+    padding-bottom: 20px;
+}
+.item2>div,.item3>div,.item4>div,.item5>div,.item6>div{
+    margin: 40px 0px;
+    /* box-shadow: -3px -3px 4px rgb(246, 244, 244),2px 2px 2px rgb(246, 244, 244); */
+    padding: 20px;
+}
+.item2>div:hover,.item3>div:hover,.item4>div:hover,.item5>div:hover,.item6>div:hover{
+    box-shadow: -3px -3px 4px rgb(246, 244, 244),2px 2px 2px rgb(246, 244, 244);
+    transform: scale(1.07);
+    transition: 2s;
+}
+.item2>div>p,.item3>div>p,.item4>div>p,.item5>div>p,.item6>div>p{
+    padding-top: 20px;
+    line-height: 2;
+}
+.item2>div>hr,.item4>div>hr,.item6>div>hr{
+ border: 1px dotted lightgray;
+}
+.item3>div>hr,.item5>div>hr{
+    border: 1px dotted white;
+}
+.item2>img,.item3>img,.item4>img,.item5>img,.item6>img{
+    height: 200px;
+}
+.item2>img:hover,.item3>img:hover,.item4>img:hover,.item5>img:hover,.item6>img:hover{
+transition: 1s;
+ box-shadow: -4px -3px 4px orangered,3px 3px 4px orangered;
+ border-radius: 10px;
+ transform: scale(1.1);
+}
+.item2>div,.item3>div,.item4>div,.item5>div,.item6>div{
+    width: 800px;
+    text-align: justify;
+}
+.item2>div>h1,.item4>div>h1,.item6>div>h1{
+    color: orange;
+}
+.item3,.item5{
+    background-color: orange;
+    color: white;
+}
+.item7{
+    background-color: red;
+}
+.item7>form>input{
+    padding: 10px;
+    width: 300px;
+}
+.item7>form>button{
+    background-color: red;
+    border: 2px dotted white;
+    color: white;
+    padding: 10px;
+}
+.item7>form>button:hover{
+    background-color: white;
+    color: red;
+}
+.item7>h1{
+    color: white;
+}
+/* .item8{
+    background-color: lightgray;
+} */
+.item8>div>ul{
+    list-style: none;
+}
+.item8>div>ul>li{
+    padding: 10px;
+}
+.item8>div>hr{
+    border: 1px dotted gray;
+    margin: 10px 0;
+}
+.item8>iframe{
+    border-radius: 100px;
+}
+.item8>.some>table{
+    height: 190px; 
+    width: 150px;
+}
+.item9{
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+    padding: 20px;
+}
+.item9>p>span{
+    color: orange;
+}

@@ -23,6 +23,19 @@
         background: linear-gradient(orange, blue ,green);
     }
 
+    /* P8.HTML */
+
+    .bgvideo{
+        display: none;
+    }
+    .banner7>.bgvideo1{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        z-index: -1;
+    }
+
 }
 
 /* TAB */
@@ -45,5 +58,20 @@
     }
     .banner3{
         background: linear-gradient(50deg,green, orange, blue);
+    }
+
+    /* P8.html */
+    
+    .bgvideo{
+        display: none;
+    }
+    .banner7>.bgvideo2{
+        position: absolute;
+        display: block;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        top: 0;
+        z-index: -1;
     }
 }

@@ -77,6 +77,9 @@
 .mx-20 {
     margin: 20px auto;
 }
+.my-20 {
+    margin: 20px auto;
+}
 
 .m-50 {
     margin: 50px;
@@ -97,11 +100,6 @@
 .p-50 {
     padding: 50px;
 }
-
-.m-50 {
-    margin: 50px;
-}
-
 .px-20 {
     padding: auto 20px;
 }
@@ -240,7 +238,8 @@ header>nav>ul>li:hover a{
     color: blue;
 }
 .banner>.bg1{
-    position: absolute;
+    position: relative;
+    overflow: hidden;
     left: 0;
     width: 100%;
     height: 100%;
@@ -248,4 +247,189 @@ header>nav>ul>li:hover a{
 }
 .bg2, .bg3{
     display: none;
+}
+
+/* CONSULTING AGENCY */
+.ceo {
+    background: url(../images/ceo.jpg);
+    background-size: cover;
+    height: 563px;
+    color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+.ceo,
+.consulting,
+.consulting-box1,
+.consulting-box2 {
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(49, 35, 35, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    line-height: 2;
+    text-align: justify;
+    padding: 30px;
+}
+.title>p,
+.consulting>p {
+    color: grey;
+}
+.title>h1{font-size: 30px;}
+.consulting-box1{
+    background-color: #dc3748;
+}
+.consulting-box2{
+    background-color: #f8bf0d;
+}
+.consulting-box1, .consulting-box2 {
+    color: #fff;
+    transition: 1s;
+    text-align: left;
+}
+.consulting-box1:hover{
+    background-color: #f8bf0d;color: #dc3748;
+}
+.consulting-box2:hover{
+    background-color: #dc3748;color: #f8bf0d;
+}
+.consulting-box1>button{
+    background-color: rgb(244, 192, 12);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    color: inherit;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.consulting-box1:hover button{
+    background-color: #dc3748;color: #fff;
+}
+
+/* HOW CAN WE HELP YOU */
+.box{
+    padding: 20px;
+    border-left: 8px solid grey;
+    transition: 1s;
+}
+.box:hover{
+    background-color: #fff;
+    border-left: 8px solid #dc3748;
+    box-shadow: 0 3px 6px rgba(49, 35, 35, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.box:hover h1{color: #f8bf0d;}
+.how-can-we-help-you>img{
+    width: 100%;
+    height: 355px;
+    margin-bottom: 20px;
+}
+
+/* BRAND WE'VE CRAFTED SO FAR */
+.img-box1{background: url(../images/img1.jpg);}
+.img-box2{background: url(../images/img2.jpg);}
+.img-box3{background: url(../images/img3.jpg);}
+.img-box4{background: url(../images/img4.jpg);}
+.img-box5{background: url(../images/img1.jpg);}
+.img-position{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: 1s;
+}
+.img-position:hover{
+    background: linear-gradient(rgba(220,55,72,0.8),rgba(244,192,12,0.8)),url(../images/ceo.jpg) no-repeat center;
+    background-size: cover;
+}
+.img-position>div>.fa-hand-pointer{
+    background-color: #dc3748;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+}
+.img-position>div>.fa-hand-pointer:hover{
+    background-color: #f8bf0d;
+}
+
+/* FOOTER */
+footer{
+    background: #f8bf0d;
+}
+footer form>div>input, footer form>textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 20px;
+    margin: 0px 10px 20px 0px;
+    outline: none;
+    transition: border-bottom 1s;
+}
+footer form>div>input:focus, footer form>textarea:focus{
+    border-bottom: 2px solid #dc3748;
+}
+footer form>textarea, footer form>button{
+    width: 100%;
+}
+footer form>button{
+    background-color: #dc3748;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s;
+}
+footer form>button:hover{
+    background-color: #fff;
+    color: rgb(244, 192, 12);
+}
+footer form>div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+footer form>div>input{
+    flex: 1;
+}
+.footer-card{
+    background-color: #fff;
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    line-height: 2;
+    padding: 30px;
+}
+.footer-card>p{
+    color: grey;
+    font-size: 20px;
+}
+.footer-card>p>[class*="fa-"]{
+    color: rgb(244, 192, 12);
+}
+.footer-card>iframe{
+    border-radius: 10px;
+    width: 100%;
+    height: 226px;
+}
+.footer-icon{
+    text-align: center;
+    color: #fff;
+}
+.footer-icon>b>[class*="fa-"]{
+    background-color: #dc3748;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    transition: 1s;
+}
+.footer-icon>b>[class*="fa-"]:hover{
+    transform: rotate(360deg);
 }

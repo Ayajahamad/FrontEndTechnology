@@ -149,7 +149,7 @@
     color: yellow;
 }
 
-/*Exampl-3*/
+/*Example-3*/
 .cssAttribute>form>[type]{
     width: 100%;
     height: 25px;
@@ -162,4 +162,95 @@
 .cssAttribute>form>[type="submit"]{
     background-color: lightskyblue;
     border: 2px solid red;
+}
+
+/* p13.HTML */
+.cssPosition>h1:first-child, .cssPosition>div>h1:first-child{
+    background-color: teal;
+}
+.cssPosition>h1:nth-child(2), .cssPosition>div>h1:nth-child(2){
+    background-color: tomato;
+}
+.cssPosition>h1:nth-child(3), .cssPosition>div>h1:nth-child(3){
+    background-color: violet;
+}
+.cssPosition h1{
+    padding: 20px;
+    color: white;
+}
+/* .cssPosition>.second{
+    position: relative;
+    left: 100px;
+} */
+
+.cssPosition>.second{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.cssPosition>div>.fifth{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.cssPosition>div{
+    border: 2px solid black;
+    padding: 20px;
+    position: relative;
+}
+.cssPosition>.seven{
+    background-color: blue;
+}
+.cssPosition>.eight{
+    background-color: crimson;
+    position: sticky;
+    top: 0%;
+}
+.cssPosition>.nine{
+    background-color: black;
+    position: fixed;
+    top: 45%;
+    right: 0%;
+    border-radius: 5px;
+    transition: 1s;
+}
+.cssPosition>.nine:hover{
+    right: 2%;
+}
+
+/* p14.HTML */
+.zIndex>section{
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    color: white;
+    position: absolute;
+}
+.zIndex{
+    position: relative;
+    height: 300px;
+}
+.zIndex>.first{
+    background-color: darkgoldenrod;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+.zIndex>.second{
+    background-color: darkgreen;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+.zIndex>.third{
+    background-color: darkmagenta;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}
+.zIndex>.first:hover{
+    z-index: 4;
+}
+.zIndex>.second:hover{
+    z-index: 4;
 }

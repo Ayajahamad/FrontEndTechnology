@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>ARRAY</h1>
+    </center>
+    <hr>
+    <h2>THERE ARE 3 TYPES OF ARRAY..!</h2>
+
+    <ol>
+        <li>Literal Array = Single
+            <ol>
+                <li>Literal</li>
+                <li>Array Using Constructor</li>
+                <li>Array Using constructer Parameter</li>
+            </ol>
+        </li>
+        <li>Object Array</li>
+        <li>JSON Array</li>
+    </ol><hr>
+
+    <script>
+        // 1. literal Array = single
+            // 1.1 literal
+            document.write(`<h3>Array literal</h3>`)
+            var users = ["first","second","third"];
+            var z = [12,4,5,,6,7,8,4];
+            document.write("users = ", users);
+            console.log("users = ", users);
+
+            //1.2 array using constructor
+            document.write(`<h3>Array using Constructor</h3>`)
+            var emp = new Array();
+            document.write(`<p>Type of EMP = ${typeof(emp)}</p>`);
+
+            emp[0] = "Raju";
+            emp[1] = "Jhon";
+            emp[2] = "Marry";
+            emp[10] = "Harry";
+
+            document.write('emp = ', emp, "<hr>");
+            console.log("emp = ", emp);
+
+            //1.3 array using constructor parameters
+            document.write(`<h3>Array using constructor parameters</h3>`)
+            var colors = new Array("red", "blue" , "green");
+            document.write("emp  = ", colors , "<hr>");
+            console.log("colors = ", colors);
+
+        // 2. Object Array
+            document.write(`<h3>Object Array</h3>`);
+
+            //Object
+            const employee = {
+                firstName : "Abhishek",
+                lastNmae : "Bachan"
+            };
+            document.write("Object = ",typeof(employee));
+
+            //Array
+            const empDetails = [
+               {
+                    firstName : "Ayaj",
+                    lastName : "Ahamad"
+                },
+                {
+                    firstName : "Sajjad",
+                    lastName : "Ahammed"
+                },
+                {
+                    firstName : "Javed",
+                    lastName : "Sir"
+                }
+            ];
+            document.write('<p>Array object =',typeof(empDetails),'</p>');
+            document.write(empDetails ,"<hr>");
+
+        // 3. JSON Array
+                document.write(`<h3>JSON Array</h3>`)
+                let empDetails1 = {
+                    "firstName" : "Java",
+                    "lastName" : "Script",
+                    "pincode" : 12345
+                };
+
+                document.write('<p>JSON ARRY = ', typeof(empDetails1), '</p>');
+                document.write(empDetails1);
+                console.log(empDetails1);
+    </script>
+</body>
+</html>

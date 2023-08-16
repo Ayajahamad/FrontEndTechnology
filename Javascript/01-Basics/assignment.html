@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Operators</title>
+</head>
+<body>
+    <h1>JavaScript Operators</h1>
+    <script>
+        let firstNumber = 20;
+        middleNumber = "20";
+        let lastNumber = 30;
+
+        document.write(`<h2>(1) Comparison Operators :</h2>`)
+
+        //Is equal to
+        document.write(`<h3> 1) Is equal to == </h3>`);
+        if(firstNumber == lastNumber){
+            document.write(true);
+        }else{
+            document.write(false);
+        }
+
+        //Identical 
+         document.write(`<h3> 2) Identical === </h3>`);
+        if(firstNumber === middleNumber){
+            document.write(true);
+        }else{
+            document.write(false);
+        }
+
+        //Not equal to
+        document.write(`<h3> 3) Not equal to != </h3>`);
+        if(firstNumber != middleNumber){
+            document.write(true);
+        }else{
+           document.write(false);
+        }
+
+        //Not Identical
+        document.write(`<h3> 4) Not Identical !== </h3>`);
+        if(firstNumber !== middleNumber){
+            document.write(true);
+        }else{
+           document.write(false);
+        }
+
+        //Greater than
+        document.write(`<h3> 5) Greater than > </h3>`);
+        if(firstNumber > lastNumber){
+            document.write(true);
+        }else{
+           document.write(false);
+        }
+
+        //Greater equal to
+        document.write(`<h3> 6) Greater equal to >= </h3>`);
+        if(firstNumber >= lastNumber){
+            document.write(true);
+        }else{
+           document.write(false);
+        }
+
+        //Less than
+        document.write(`<h3> 7) Less than < </h3>`);
+        if(firstNumber < lastNumber){
+            document.write(true);
+        }else{
+           document.write(false);
+        }
+
+        //Less equal to
+        document.write(`<h3> 8) Less equal to <= </h3>`);
+        if(firstNumber <= lastNumber){
+            document.write(true);
+        }else{
+           document.write(false);
+        }
+        document.write(`<hr>`)
+
+        //Bitwise Operators
+        document.write(`<h2>(2) Bitwise Operators :</h2>`)
+
+        //Bitwise AND
+        document.write(`<h3> 1) Bitwise AND & </h3>`);
+        if(10 == 10 & 10 == 11){
+            document.write("Both conditions are Equal");
+        }else{
+           document.write("Both conditions are Not Equal");
+        }
+
+        //Bitwise OR
+        document.write(`<h3> 2) Bitwise OR | </h3>`);
+        if(10 == 10 | 10 == 11){
+            document.write("Any one condition is true");
+        }else{
+           document.write("Both conditions are false");
+        }
+
+        //Bitwise XOR
+        document.write(`<h3> 3) Bitwise XOR ^ </h3>`);
+        if(10 == 10 ^ 10 == 11){
+            document.write("Any one condition is true - then true");
+        }else{
+           document.write("Both conditions are false or Both condition are true - then false");
+        }
+
+        //Bitwise NOT
+        document.write(`<h3> 4) Bitwise Not ~ (2's Complement) </h3>`);
+        let num = 25;  // Binary: 00011001
+        let notNum = ~num;  // Binary: 11100110 (Decimal: -26)
+        document.write(notNum); // Output: -26
+
+        //Bitwise Left Shift
+        document.write(`<h3> 5) Bitwise LeftShift << </h3>`);
+        let num1 = 10;  // Binary: 00001010
+        let lshiftedNum = num1 << 2;  // Binary: 00101000 (Decimal: 40)
+        document.write(lshiftedNum); // Output: 40
+
+        //Bitwise Right Shift
+        document.write(`<h3> 6) Bitwise RightShift >> </h3>`);
+        let num2 = 44;  // Binary: 00101100
+        let rshiftedNum = num2 >> 2;  // Binary: 00001011 (Decimal: 11)
+        document.write(rshiftedNum); // Output: 11
+
+        //Bitwise Right Shift with Zero
+        document.write(`<h3> 7) Bitwise Right Shift with Zero >>> </h3>`);
+        let num3 = 213;  // Binary: 11010101
+        let shiftedNum = num3 >>> 2;  // Binary: 00110101 (Decimal: 53)
+        document.write(shiftedNum); // Output: 53
+
+        document.write(`<hr>`)
+
+        //Logical Operators
+        document.write(`<h2>(3) Logical Operators :</h2>`);
+
+        //Logical AND
+        document.write(`<h3> 1) Logical AND && </h3>`);
+        if(10 == 10 && 10 == 11){
+            document.write("Both conditions are Equal");
+        }else{
+           document.write("Both conditions are Not Equal");
+        }
+
+        //Logical OR
+        document.write(`<h3> 2) Bitwise OR | </h3>`);
+        if(10 == 10 || 10 == 11){
+            document.write("Any one condition is true");
+        }else{
+           document.write("Both conditions are false");
+        }
+
+        //Logical Not
+        document.write(`<h3> 3) Logical Not ! </h3>`);
+        document.write(!(10==20));
+
+        document.write(`<hr>`)
+
+        //Assignment Operators
+        document.write(`<h2>(4) Assignment Operators :</h2>`);
+
+        //Assign
+        document.write(`<h3> 1) Assign = </h3>`);
+        let b = 10;
+        let a = b;
+        document.write(a);
+
+        //Add and Assign
+        document.write(`<h3> 2) Add and Assign += </h3>`);
+        a += b;
+        document.write(a)
+
+        //Subtract and Assign
+        document.write(`<h3> 3) Subtract and Assign -= </h3>`);
+        a -= b;
+        document.write(a)
+
+        //Multiply and Assign
+        document.write(`<h3> 4) Multiply and Assign *= </h3>`);
+        a *= b;
+        document.write(a)
+
+        //Devide and Assign
+        document.write(`<h3> 5) Devide and Assign /= </h3>`);
+        a /= b;
+        document.write(a)
+
+        //Modulus and Assign
+        document.write(`<h3> 6) Modulus and Assign %= </h3>`);
+        a %= b;
+        document.write(a)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter Your First Number:");
+        let b = prompt("Enter Your Second Number:");
+        let c = prompt("Enter Your Third Number:");
+        let fNum = Number(a);
+        let sNum = Number(b);
+        let lNum = Number(c);
+
+        if(a > b && a < c) {
+            document.write(`<h2>In three Numbers : ${fNum} and ${sNum} and ${
+            lNum}: First Number is Greater.</h2>`);
+        }else if(b > a && b > c){
+            document.write(`<h2>In three Numbers : ${fNum} and  ${sNum} and ${lNum}: Second Number is Greater.</h2>`);
+        }else if(c > a && c > b){
+            document.write(`<h2>In three Numbers : ${fNum} and ${sNum} and ${lNum}: Third Number is Greater.</h2>`);
+        }else{
+            document.write(`<h2>Plz Enter Number</h2>`)
+        }
+    </script>
+</body>
+</html>

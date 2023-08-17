@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+</head>
+<body>
+    <script>
+        let year = prompt("Enter Your Year:");
+
+        function isLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                document.write(`<h2>The year ${year} Is Leap Year.</h2>`);
+            }else{
+                document.write(`<h2>The year ${year} Is Not a Leap Year .</h2>`);
+            }
+        }
+        isLeapYear(year);
+    </script>
+</body>
+</html>

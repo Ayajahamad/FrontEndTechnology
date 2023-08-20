@@ -1,0 +1,91 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root{
+    --bg-green :#43ba80;
+    --bg-orange :#ff521a;
+    --txt-brown :#ff521a;
+}
+
+/* FLEX */
+.container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* BANNER CODE */
+.banner {
+    background: linear-gradient(rgba(55,57,69,0.8),rgba(55,57,69,0.8)), url(../images/desktop.jpg) no-repeat center;
+    background-size: 100%;
+    padding: 50px;
+}
+.banner>header>nav>ul {
+    list-style: none;
+    float: right;
+}
+.banner>header>nav>ul>li {
+    display: inline-block;
+    padding: 20px;
+}
+.banner>header>nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+.banner>header>nav>ul>li:hover a{
+    color: var(--txt-brown);
+}
+.banner>header>nav>img {
+    height: 54px;
+}
+.banner>header>nav>ul>li:last-child {
+    background-color: var(--bg-green);
+    border-radius: 10px;
+}
+.banner>section{
+    margin-top: 100px;
+    width: 60%;
+}
+.banner>section>h1{
+    color: #fff;
+    font-size: 50px;
+}
+.banner>section>h1>span {
+    color: var(--txt-brown);
+}
+.banner>section:hover{
+    color: #fff;
+}
+.banner>section>h1+hr{
+    width: 100px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.banner>section>p {
+    color: #fff;
+    text-align: justify;
+}
+.banner>section>h1, .banner>section>p,.banner>button{
+    margin: 20px auto;
+}
+.banner>section>button{
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+.banner>section>button:nth-child(4){
+    background-color: var(--bg-green);
+}
+.banner>section>button:last-child{
+    background-color: var(--txt-brown);
+}
+.banner>section>button:hover{
+    border: 2px solid #fff;
+    background-color: transparent;
+}

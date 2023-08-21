@@ -1,0 +1,53 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    border: 2px solid rgb(62, 59, 59);
+    width: 450px;
+    margin: 50px auto;
+    background-color: rgb(62, 59, 59);
+    /* border-radius: 20px; */
+}
+.body{
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(120, 117, 117);
+    box-shadow: 4px 4px 2px rgb(120, 117, 117) ,-4px -4px 2px rgb(120, 117, 117);
+}
+.screen {
+    margin: 10px 10px 10px 10px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    box-shadow: -2px -2px 1px rgb(35, 101, 158) ,2px 2px 1px rgb(35, 101, 158);
+}
+.buttons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    
+}
+.buttons>button{
+    font-size: 20px;
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 1px rgb(35, 101, 158) ,-1px -1px 1px rgb(35, 101, 158);
+}
+.buttons>button:hover{
+    background-color: aliceblue;
+    color: black;
+}
+.buttons>:nth-child(4),.buttons>:nth-child(8),.buttons>:nth-child(12),.buttons>:nth-child(15),.buttons>:nth-child(16){
+    background-color: rgb(46, 45, 45);
+    color: white;
+}
+.buttons>:nth-child(13){
+    background-color: red;
+    color: white;
+}

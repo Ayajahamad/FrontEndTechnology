@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>JS-Variables..!</h1>
+    </center>
+    <hr>
+
+    <pre>
+        DATATYPE
+            1) Primitive Data Types
+            2) Non-Primitive/ Derived Data Types
+
+            1) PRIMITIVE Data Types
+                - int (Integer) -> It accept only round number Ex = 0-9
+                - Float -> It accept decimal value Ex = 9.10
+                - Boolean -> Either TRUE or FALSE
+                - char -> It accept single character Ex = Apple
+                - void -> returns null value
+            
+            2)  - Array
+                - Structure
+                - Union
+                - Enum
+                - Pointer
+                - Function
+    </pre>
+    <hr>
+
+    <script>
+        //var , let and const are the keyword, is used for to declare the variable
+
+        var firstVariable;
+        document.write(firstVariable, "<br>");
+        document.write("<b>Without Value :</b>", firstVariable, "<br>");
+
+        // String
+        firstVariable = "Hello JS";
+        document.write("<b>With Value :</b>", firstVariable, "<br>");
+        document.write("<b>With Value :</b>" + firstVariable + "<br>");
+        document.write("<b>With Value :" , firstVariable , "</b><br>");
+        document.write("<b>With Value :" + firstVariable + "</b><br>");
+        document.write(`Wuth Value : ${firstVariable}</br></br>`);
+        document.write(typeof(firstVariable), "<br><hr>");
+
+        // Character
+        firstVariable = "A";
+        document.write("<b>With Value :</b>", firstVariable, "<br>");
+        document.write("<b>With Value :</b>" + firstVariable + "<br>");
+        document.write("<b>With Value :" , firstVariable , "</b><br>");
+        document.write("<b>With Value :" + firstVariable + "</b><br>");
+        document.write(`Wuth Value : ${firstVariable}</br></br>`);
+        document.write(typeof(firstVariable), "<br><hr>");
+
+        // Number
+        firstVariable = 1000;
+        document.write("<b>With Value :</b>", firstVariable, "<br>");
+        document.write("<b>With Value :</b>" + firstVariable + "<br>");
+        document.write("<b>With Value :" , firstVariable , "</b><br>");
+        document.write("<b>With Value :" + firstVariable + "</b><br>");
+        document.write(`Wuth Value : ${firstVariable}</br></br>`);
+        document.write(typeof(firstVariable), "<br><hr>");
+
+        // Float
+        firstVariable = 1000.5555;
+        document.write("<b>With Value :</b>", firstVariable, "<br>");
+        document.write("<b>With Value :</b>" + firstVariable + "<br>");
+        document.write("<b>With Value :" , firstVariable , "</b><br>");
+        document.write("<b>With Value :" + firstVariable + "</b><br>");
+        document.write(`Wuth Value : ${firstVariable}</br></br>`);
+        document.write(typeof(firstVariable), "<br><hr>");
+
+        // Boolean
+        firstVariable = true;
+        document.write("<b>With Value :</b>", firstVariable, "<br>");
+        document.write("<b>With Value :</b>" + firstVariable + "<br>");
+        document.write("<b>With Value :" , firstVariable , "</b><br>");
+        document.write("<b>With Value :" + firstVariable + "</b><br>");
+        document.write(`Wuth Value : ${firstVariable}</br></br>`);
+        document.write(typeof(firstVariable), "<br><hr>");
+
+        // Boolean
+        firstVariable = false;
+        document.write("<b>With Value :</b>", firstVariable, "<br>");
+        document.write("<b>With Value :</b>" + firstVariable + "<br>");
+        document.write("<b>With Value :" , firstVariable , "</b><br>");
+        document.write("<b>With Value :" + firstVariable + "</b><br>");
+        document.write(`Wuth Value : ${firstVariable}</br></br>`);
+        document.write(typeof(firstVariable), "<br><hr>");
+
+        /* var is a weaker signal and always have global scope */
+        /* let and const are block scope variable */
+        
+    </script>
+</body>
+</html>

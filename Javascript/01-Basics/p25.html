@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>Call Back Function..!</h1>
+    </center>
+
+    <script>
+        function howAreYou(question, yes, no){
+            if(confirm(question)){
+                yes();
+            }else{
+                no();
+            }
+        }
+        //function call
+        howAreYou(
+            "How Are You", //question - parameter
+            function(){document.write(`<p>This is SECOND parameter value , Good</p>`)}, //yes - argument
+            function(){document.write(`<p>This is SECOND parameter value , Bad</p>`)}, //no - argument
+            );
+    </script>
+</body>
+</html>

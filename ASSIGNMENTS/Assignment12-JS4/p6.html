@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign of the Number</h1>
+        <form action="">
+            <label for="input1">Enter a Number :</label><br>
+            <input type="number" name="input1" id="input1"> <br>
+            <button type="button" onclick="signNumber()">Click Here</button>
+            <button type="clear">Clear</button>
+        </form>
+        <div id="result">Result</div>
+    </div>
+
+    <script>
+        function signNumber(){
+            let sign = document.getElementById('input1').value;
+
+            if(sign < 0){
+                document.getElementById('result').innerHTML = `The sign ${sign} is Negative`;
+            }else if(sign == 0){
+                document.getElementById('result').innerHTML = `The sign ${sign} is Zero`;
+            }else if(sign > 0){
+                document.getElementById('result').innerHTML = `The sign ${sign} is Positive`;
+            }else{
+                document.getElementById('result').innerHTML = "Invalid input";
+            }
+        }
+    </script>
+</body>
+</html>

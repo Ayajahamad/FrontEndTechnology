@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check whether a character is an alphabet or not</h1>
+        <form action="">
+            <label for="inp">Enter a Character :</label>
+            <input type="text" name="inp" id="inp"> <br>
+            <button type="button" onclick="checkAlphabet()">Click to check</button>
+            <button type="clear">Clear</button>
+        </form>
+        <div id="result">Result</div>
+    </div>
+    <script>
+        function checkAlphabet(){
+            let alpha1 = document.getElementById('inp').value;
+            let alpha = alpha1.charCodeAt(0);
+
+            if ((alpha >= 65 && alpha <= 90) || (alpha >= 97 && alpha <= 122)){
+                document.getElementById('result').innerHTML= `Entered Character ${alpha1} : Is an Alphabet`;
+            }else{
+                document.getElementById('result').innerHTML= `Entered Character ${alpha1} : Is Not an Alphabet`;
+            }
+        }
+    </script>
+</body>
+</html>

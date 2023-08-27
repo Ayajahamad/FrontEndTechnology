@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Largest of 2 numbers</h1>
+        <form action="">
+            <label for="inp1">Enter First number :</label>
+            <input type="number" name="inp1" id="inp1"> <br>
+
+            <label for="inp2">Enter Second number :</label>
+            <input type="number" name="inp2" id="inp2"><br>
+
+            <button type="button" onclick="findNumber()">Click to Ckeck</button> 
+            <button type="clear">Clear</button>    
+        </form>
+        <div id="result">Result</div>
+    </div>
+
+    <script>
+        function findNumber(){
+            let inp1 = document.getElementById('inp1').value;
+            let inp2 = document.getElementById('inp2').value;
+
+            if(inp1 > inp2){
+                document.getElementById('result').innerHTML = `in two numbers ${inp1} and ${inp2} : ${inp1} is Greater.` 
+            }else if(inp2 > inp1){
+                document.getElementById('result').innerHTML = `in two numbers ${inp1} and ${inp2} : ${inp2} is Greater.` 
+            }else{
+                document.getElementById('result').innerHTML = "Invalid input"
+            }
+        }
+    </script>
+</body>
+</html>

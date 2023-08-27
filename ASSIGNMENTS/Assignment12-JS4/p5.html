@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <form action="">
+            <label for="inp1">Enter temperatureF :</label>
+            <input type="number" id="inp1" name="inp1"><br>
+            <button type="button" onclick="fahrenheitToCelsius()">Change to Celsius</button> <br>
+
+            <label for="inp2">Enter temperatureC :</label>
+            <input type="number" id="inp2" name="inp2">
+            <button type="button" onclick="celsiusToFahrenheit()">Change to Fahrenheit</button>  
+        </form>
+        <div id="result1">ResultF</div>
+        <div id="result2">ResultC</div>
+    </div>
+    <script>
+        // Function to convert Fahrenheit to Celsius
+        function fahrenheitToCelsius() {
+            const temperatureF = Number(document.getElementById('inp1').value);
+
+        let convertedCelsius = Number((temperatureF - 32) * 5/9);
+        document.getElementById('result1').innerHTML = (`${temperatureF}°F is ${convertedCelsius.toFixed(2)}°C`);
+        }
+
+        // Function to convert Celsius to Fahrenheit
+        function celsiusToFahrenheit() {
+            const temperatureC = Number(document.getElementById('inp2').value);
+
+        let convertedFahrenheit = Number((temperatureC * 9/5) + 32);
+        document.getElementById('result2').innerHTML = `${temperatureC}°C is ${convertedFahrenheit.toFixed(2)}°F`;
+        }
+    </script>
+</body>
+</html>

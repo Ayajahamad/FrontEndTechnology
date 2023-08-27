@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Assignment</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Palindrome Number Finder</h1>
+            <form action="">
+                <label for="inp">Enter a Number :</label>
+                <input type="number" name="inp" id="input1"> <br>
+                <button type="button" onclick="palindromNumber()">Click Here</button>
+                <button type="clear">Clear</button>
+            </form>
+            <div id="result">Result</div>
+        </div>
+
+        <script>
+            function palindromNumber(){
+                let number1 =document.getElementById('input1').value;
+                let number = Number(number1);
+
+                if(number < 0){
+                    document.getElementById('result').innerHTML = "Plz enter positive number";
+                }else{
+
+                    let originalNumber = number;
+                    let reversedNumber = 0;
+
+                    while(number > 0) {
+                        const digit = number % 10;
+                        reversedNumber = reversedNumber * 10 + digit;
+                        number = Math.floor(number / 10);
+                    }
+                    if(originalNumber === reversedNumber) {
+                        document.getElementById('result').innerHTML=`The Number ${originalNumber} is : Palindrom`;
+                    }else{
+                        document.getElementById('result').innerHTML = `The Number ${originalNumber} is : Not a Palindrom`;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

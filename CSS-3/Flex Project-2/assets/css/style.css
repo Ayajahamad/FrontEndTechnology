@@ -1,0 +1,284 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root{
+    --bg-green :#43ba80;
+    --bg-orange :#ff521a;
+    --txt-brown :#ff521a;
+}
+
+/* FLEX */
+.container{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BANNER CODE */
+.banner, .business ,.contactUs {
+    background: linear-gradient(rgba(55,57,69,0.8),rgba(55,57,69,0.8)), url(../images/desktop.jpg) no-repeat center;
+    background-size: 100%;
+    padding: 50px;
+}
+.banner{
+    padding: 50px 100px;
+}
+.banner>header>nav>ul {
+    list-style: none;
+    float: right;
+}
+.banner>header>nav>ul>li {
+    display: inline-block;
+    padding: 20px;
+}
+.banner>header>nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+.banner>header>nav>ul>li:hover a{
+    color: var(--txt-brown);
+}
+.banner>header>nav>img {
+    height: 54px;
+}
+.banner>header>nav>ul>li:last-child {
+    background-color: var(--bg-green);
+    border-radius: 10px;
+}
+.banner>section{
+    margin-top: 100px;
+    width: 60%;
+}
+.banner>section>h1, .business>h1{
+    color: #fff;
+    font-size: 50px;
+}
+.banner>section>h1>span {
+    color: var(--txt-brown);
+}
+.banner>section:hover{
+    color: #fff;
+}
+.banner>section>h1+hr{
+    width: 100px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.banner>section>p {
+    color: #fff;
+    text-align: justify;
+}
+.banner>section>h1, .banner>section>p,.banner>section>button{
+    margin: 20px auto;
+}
+.banner>section>button,
+.business>div>button,
+.aboutus>.container>section:last-child>button,
+.contactUs>section:last-child>form>button{
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+.banner>section>button:nth-child(4),
+.business>div>button:first-child,
+.aboutus>.container>section:last-child>button{
+    background-color: var(--bg-green);
+}
+.banner>section>button:last-child, 
+.business>div>button:last-child,
+.contactUs>section:last-child>form>button{
+    background-color: var(--txt-brown);
+}
+.banner>section>button:hover, .contactUs>section:last-child>form>button:hover{
+    border: 2px solid #fff;
+    background-color: transparent;   
+}
+.business>div>button:hover{
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+/* ICON SECTION */
+.iconSection, .business,.aboutus{
+    padding: 100px;
+}
+.iconSection>.item{
+    flex: 1;
+}
+.iconSection>.item>div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 2px auto;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+    border-top: 3px solid #ff521a;
+}
+.iconSection>.item>div:hover{
+    background-color: var(--txt-brown);
+    color: #fff;
+    border-top: 3px solid #43ba80;
+
+}
+.iconSection>.item>div>section>h2{
+    margin: 10px auto;
+}
+[class*="fa-"]{
+    color: var(--bg-green);
+}
+/* BUSINESS */
+.business{
+    justify-content: space-between;
+}
+.business>h1>span:first-child{
+    color: #43ba80;
+}
+.business>h1>span:last-child{
+    color: #ff521a;
+}
+/* ABOUT US */
+.aboutus>center{
+    padding-bottom: 50px;
+}
+.aboutus>center>h5{
+    color: #ff521a;
+}
+.aboutus>.container>section:first-child{
+    flex: 2;
+}
+.aboutus>.container>section:last-child{
+    flex: 1;
+    line-height: 2;
+    text-align: justify;
+}
+.aboutus>.container>section:first-child>table{
+    width: 100%;
+    border-spacing: 10px;
+}
+.aboutus>.container>section:first-child>table th,
+.aboutus>.container>section:first-child>table td{
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.aboutus>.container>section:first-child>table tr:first-child th{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.aboutus>.container>section:first-child>table tr:first-child th:first-child{
+    color: #ff521a;
+}
+table tr:nth-child(3)>td:first-child,
+table tr:nth-child(4)>td:first-child,
+table tr:nth-child(5)>td:first-child,
+table tr:nth-child(6)>td:first-child{color: #43ba80;}
+
+.aboutus>.container>section:last-child{
+    margin-bottom: 20px;
+}
+.aboutus>.container>section:last-child>button:hover{
+    border: 2px solid #ff521a;
+    background-color: transparent;
+    color: #43ba80;
+}
+
+/*CONTACT US */
+.contactUs{
+    padding: 50px 100px;
+}
+.contactUs>section>img{
+    width: 50%;
+}
+#sub{
+    width: 95%;
+}
+#name,#sub,#email{
+    padding: 8px;
+    background-color: #5E697B;
+    border: none;
+    outline: none;
+}
+.contactUs>section:last-child>form>button{
+    margin-top: 10px;
+}
+#lab{
+    color: #fff;
+}
+.contactUs>section:last-child>h5{
+    color: #ff521a;
+}
+.contactUs>section:last-child>h1{
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 30px;
+}
+/* TESTIMONIALS */
+.testimonial{
+    padding: 50px 150px;
+}
+.testimonial>section>center{
+    margin-bottom: 50px;
+}
+.testimonial>section>section>img{
+    width: 210px;
+    border-radius: 0 10px 10px 0;
+}
+.testimonial>section>section{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+.testimonial>section>section>div{
+    padding: 20px 20px 20px 30px;
+    text-align: justify;
+    line-height: 2;
+}
+.testimonial>section>center>h5{
+    color: #ff521a;
+}
+.testimonial>section>center>h1{
+    margin-bottom: 50px;
+    color: black;
+    font-size: 30px;
+}
+.fa-quote-left{
+    color: #fff;
+    font-size: 30px;
+    padding: 15px;
+    background-color: #43ba80;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.testimonial>section>section>div>h3{
+    margin-top: 20px;
+}
+.testimonial>section>section>div>h5{
+    color: #43ba80;
+}
+/* FOOTER */
+.footer1{
+    color: #fff;
+}
+.footer1>section{
+    text-align: center;
+}
+.footer1>section>div:first-child>span{
+    padding: 30px;
+}
+.footer1>section>div:first-child{
+    padding: 50px;
+    background: linear-gradient(rgba(55,57,69,0.8),rgba(55,57,69,0.8));
+    width: 90vw;
+}
+.footer1>section>div:last-child{
+    padding: 50px;
+    background: linear-gradient(rgba(6, 8, 14, 0.8),rgba(9, 10, 19, 0.8));
+    width: 90vw;
+}
+.footer1>section>div:last-child>p>span{
+    color: #ff521a;
+}

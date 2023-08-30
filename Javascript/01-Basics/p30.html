@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <h1>Remainder of 2 Number's</h1>
+    <button onclick="remainder();" type="button" >Click to Calculate</button>
+    <div id="result"></div>
+    <script>
+       
+        function remainder(){
+            let x = window.prompt("enter first number");
+            let y = prompt("enter second number");
+
+            let result = Number(x) % Number(y);
+
+            document.getElementById('result').innerHTML="<h3>Result x%y = " + result +"</h3>";
+        }
+    </script>
+</body>
+</html>

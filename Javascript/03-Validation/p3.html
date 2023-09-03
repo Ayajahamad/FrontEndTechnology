@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Validation</title>
+</head>
+<body>
+    <center>
+        <h1>MOBILE NUMBER VALIDATION</h1>
+    </center>
+    <hr>
+
+    <form action="" autocomplete="off" onsubmit="userHandler(event)">
+        <label for="">Enter User Mobile Number :</label>
+        <input type="text" placeholder="User Mobile" name="mobile" id="mobile">
+        <strong id="status"></strong>
+        <button type="button">SUBMIT MOBILE NUMBER</button>
+    </form>
+
+    <script>
+        let userHandler = function(e){
+            e.preventdefault();
+            let mobile = document.getElementById('mobile').value;
+            let status = document.getElementById('mobile').value;
+        }
+    </script>
+</body>
+</html>

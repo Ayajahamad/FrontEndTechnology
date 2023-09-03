@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>GMAIL VALIDATION</h1>
+    </center>
+    <hr>
+
+    <form action="" onsubmit="validateEmailAddress(event)">
+        <label for="">Enter Email :</label>
+        <input type="text" placeholder="Enter Gmail" name="email" id="email">
+        <strong id="error"></strong>
+        <button type="submit">SUBMIT USER</button>
+    </form>
+
+    <script>
+        function validateEmailAddress(e){
+            e.preventDefault();
+
+        let emailAddress = document.getElementById('email').value;
+            
+       
+        if(emailAddress.indexOf("@") >= 2 &&
+         emailAddress.indexOf(".") > emailAddress.indexOf("@")+2 &&
+         emailAddress.indexOf(" ") == -1){
+            alert("valid")
+        }else{
+            alert("invalid")
+        }
+
+            // if((emailAddress[emailAddress.length-1] == "m")&&
+            //     (emailAddress[emailAddress.length-2] == "o")&&
+            //     (emailAddress[emailAddress.length-3] == "c")&&
+            //     (emailAddress[emailAddress.length-4] == ".")&&
+            //     (emailAddress[emailAddress.length-5] == "l")&&
+            //     (emailAddress[emailAddress.length-6] == "i")&&
+            //     (emailAddress[emailAddress.length-7] == "a")&&
+            //     (emailAddress[emailAddress.length-8] == "m")&&
+            //     (emailAddress[emailAddress.length-9] == "g")&&
+            //     (emailAddress[emailAddress.length-10] == "@")&&
+            //     (emailAddress.indexOf(" ") == -1)&&
+            //     (emailAddress.length >=11 )&&
+            //     (emailAddress.length <= 15)){
+            //         alert("Email address is valid.");
+            // } else{
+            //     alert("Error !!! Email address is not valid.");
+            //   }
+
+
+            //     let result;
+            // switch (true) {
+            //     case (emailAddress[emailAddress.length-1] == " "):
+            //         result = "Dont add space after mail";
+            //         break;
+
+            //     case emailAddress.indexOf(" ") !== -1:
+            //         result = "dont give space";
+            //         break;
+
+            //     case (emailAddress[emailAddress.length-1] !== "m"):
+            //         result = "Enter gmail.com-m";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-2] !== "o":
+            //         result = "Enter gmail.com-o";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-3] !== "c":
+            //         result = "Enter gmail.com-c";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-4] !== ".":
+            //         result = "Enter gmail.com-.";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-5] !== "l":
+            //         result = "Enter gmail.com-l";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-6] !== "i":
+            //         result = "Enter gmail.com-i";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-7] !== "a":
+            //         result = "Enter gmail.com-a";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-8] !== "m":
+            //         result = "Enter gmail.com-m";
+            //         break;
+
+            //     case emailAddress[emailAddress.length-9] !== "g":
+            //         result = "Enter gmail.com-g";
+            //         break;
+                
+            //     case emailAddress[emailAddress.length-10] !== "@":
+            //         result = "Enter @gmail.com-@";
+            //         break;
+
+            //     case emailAddress.length <= 11:
+            //         result = "add some character before @";
+            //         break;
+
+            //     case emailAddress.length >= 30:
+            //         result = "dont add more then 30 char ";
+            //         break;
+            
+            //     default:
+            //         result = "valid Email";
+            //         break;
+            // }
+            // alert(result);
+        }
+    </script>
+</body>
+</html>

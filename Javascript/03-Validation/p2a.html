@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Validation</title>
+</head>
+<body>
+    <center>
+        <h1>EMAIL VALIDATION</h1>
+    </center>
+    <hr>
+
+    <form action="" autocomplete="off" onsubmit="userHandler(event)">
+        <label for="">Enter User Email:</label>
+        <input type="text" placeholder="Enter email" name="email" id="email">
+        <strong id="status"></strong>
+        <button type="submit">SUBMIT USER</button>
+    </form>
+
+
+    <script>
+        let userHandler = function(e){
+            e.preventDefault();
+            let email = document.getElementById("email").value;
+            let status = document.getElementById("status");
+
+            let regx = /^\S+@\S+\.\S+$/;
+
+            if(email.length === 0){
+                status.innerHTML = "Plese Enter Email";
+                status.style.color = "orangered";
+            }
+            else {
+                if(regx.test(email) === false){
+                    status.innerHTML = "Invalid Email";
+                    status.style.color = "orangered";
+                }else{
+                    status.innerText = "Valid Email";
+                    status.style.color = "green";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-BASICS</title>
+    </head>
+    <body>
+        <center>
+            <h1>Arrays</h1>
+        </center>
+        <hr>
+        <!-- Array -> is a group of values of similar typeof
+        Types of Array:
+         1. Literal tyep (single)
+            a. array literal
+            b. array using constructor
+            c. array as constructor parameters
+        2. Object Array
+        3. JSON (Javascript Object Notation) Array (Response of REST [Representational State transfer]) API -->
+
+        <script>
+            //Array Literal
+
+            var num = [12,13,4,6,7,3]; // numbers
+            document.write(`<h3>${num}</h3>`);
+            document.write(`<h3>${num[4]}</h3>`); //arrName[index]
+
+            var user = ["Ram","Sham","Bhim","Som","Dom","Bom"]; // numbers
+            document.write(`<h3>${user}</h3>`);
+            document.write(`<h3>${user[2]}</h3>`); //arrName[index]
+
+            var arr = [true,124,"Ram",16.67,"user@gmail.com",3]; // numbers
+            document.write(`<h3>${arr}</h3>`);
+            document.write(`<h3>${arr[0]}</h3>`); //arrName[index]
+
+            for(let i=0; i<user.length;i++){
+                document.write(`<h3 style='color:orangered;'> ${user[i]}</h3>`);
+            }
+        </script>
+    </body>
+</html>

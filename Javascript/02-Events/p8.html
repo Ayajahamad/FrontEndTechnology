@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENT</title>
+</head>
+<body>
+    <center>
+        <h1>Media Events</h1>
+    </center>
+    <hr>
+    <div>
+        <h1>Status : <span id="status"></span></h1>
+    </div>
+
+    <video width="500px" height="300px" controls onplay="playVideo()" onpause="pauseVideo()" onvolumechange="volumeChange()" onseeking="seekingVideo()">
+        <source src="assets/madia/WhatsApp Video 2023-06-21 at 13.23.05.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        function playVideo(){
+            document.getElementById('status').innerHTML = "VideoPlayed"
+            document.getElementById('status').style.color = "red";
+        }
+
+        function pauseVideo(){
+            document.getElementById('status').innerHTML = "VideoPaused"
+            document.getElementById('status').style.color = "blue";
+        }
+        function volumeChange(){
+            document.getElementById('status').innerHTML = "Video volume Changed"
+            document.getElementById('status').style.color = "green";
+        }
+        function seekingVideo(){
+            document.getElementById('status').innerHTML = "VideoSeeked"
+            document.getElementById('status').style.color = "orange";
+        }
+    </script>
+</body>
+</html>

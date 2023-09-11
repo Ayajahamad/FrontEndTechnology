@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENT</title>
+</head>
+<body>
+    <center>
+        <h1>Events Input</h1>
+    </center>
+    <hr>
+      
+    <p id="result"></p>
+
+    <form action="" onsubmit="sub(event)" onreset="res()">
+        <label for="">Focus the tag :</label>
+        <input type="text" name="" id="" onfocusin="foc()" onfocusout="out()">
+
+        <select name="" id="" onchange="cha()">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+        </select>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="cli()">Clicked</button>
+    </form>
+
+    <script>
+         function foc(){
+            document.getElementById('result').innerHTML = "Focused In";
+        }
+        function out(){
+            document.getElementById('result').innerHTML = "Focused Out";
+        }
+        function cha(){
+            document.getElementById('result').innerHTML = "Changed";
+        }
+        function sub(e){
+            e.preventDefault();
+            document.getElementById('result').innerHTML = "Submitted";  
+        }
+        function res(){
+            document.getElementById('result').innerHTML = "Reseted";
+        }
+        function cli(){
+            document.getElementById('result').innerHTML = "Clicked"; 
+        }
+    </script>
+</body>
+</html>

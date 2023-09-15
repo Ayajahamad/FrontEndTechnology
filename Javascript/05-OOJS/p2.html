@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+         <h1>Functions, arrays and objects as properties</h1>
+    </center>
+    <hr>
+    <script>
+        let user = {
+            'name':"Sajjad",
+            'email':"sajj420@gmail.com",
+            'hobbies':['cycling','cheating','flirting'],
+            'getName':function(){
+                return this.name;
+            },
+            "getEmail":() => {
+                //this pointer-keyword is not accessable inside arrow function (function expression)
+                document.write(`<h3>my email is = ${this.email}</h3>`);
+                // return this.email;
+                // return email
+            },
+            'address':{
+                'city': "Bengalore",
+                'pincode': 564535
+            },
+            getAddress: function(){
+                return this.address.city + ',pin ='+ this.address.pincode;
+            }
+        };
+
+        document.write(`<h3> name = ${user.name}</h3>`);
+        document.write(`<h3> hobbies = ${user.hobbies}</h3>`);
+
+        user.getName();
+        user.getEmail();
+
+        document.write(`<h3> address city = ${user.address.city}</h3>`);
+    </script>
+</body>
+</html>

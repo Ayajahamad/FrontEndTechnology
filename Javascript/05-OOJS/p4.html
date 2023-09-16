@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>By using an object constructor (using constructor parameter)</h1>
+    </center>
+    <hr>
+
+    <h3>Example-1</h3>
+
+    <script>
+        let empDetails1 = new Object({
+            fname:"Tejes",
+            laname:"vaijinath",
+            fullName:function(){return this.fname + " "+this.laname}
+        });
+
+        document.write(typeof empDetails1, "<br>");
+        document.write(empDetails1.fname, "<br>");
+        document.write(empDetails1.laname, "<br>");
+        document.write(empDetails1.fullName(), "<br>");
+    </script>
+</body>
+</html>

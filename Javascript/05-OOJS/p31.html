@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Class ES-6</h1>
+        <p>Finding Even or Odd using Class</p>
+    </center>
+    <hr>
+
+    <form action="">
+        <label for="num">Enter Number : </label>
+        <input type="number" name="num" id="num"><br>
+        <button type="button" onclick="new Num().findNum()">Submit</button>
+        <hr>
+        <h3 id="result"></h3>
+    </form>
+    <script>
+        class Num{
+            constructor(){
+                this.num = +document.getElementById('num').value;
+            }
+            findNum(){
+                console.log(this.num % 2);
+                if(this.num % 2 === 0){
+                    document.getElementById('result').innerHTML = `The Number ${this.num} : is Even`;
+                }else{
+                    document.getElementById('result').innerHTML = `The Number ${this.num} : is Odd`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

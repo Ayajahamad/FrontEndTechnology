@@ -6,6 +6,21 @@
     <title>OOJS</title>
 </head>
 <body>
-    
+    <script>
+        // Object Constructor
+        // Object.create -> copy or clone one object prototype in another object
+
+        const user = {
+            name : "Raj",
+            email:"raj@gmail.com",
+            mobile:"8976567890",
+            age: 25
+        };
+
+        console.log(`user = `, user);
+
+        let user1 = Object.create(user);
+        console.log(`user1= `, user1);
+    </script>
 </body>
 </html>

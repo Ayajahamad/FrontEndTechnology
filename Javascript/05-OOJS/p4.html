@@ -25,5 +25,23 @@
         document.write(empDetails1.laname, "<br>");
         document.write(empDetails1.fullName(), "<br>");
     </script>
+
+    <h3>Example-2</h3>
+    <script>
+        function studDetails(firstName,lastName){
+            console.log(`firstName = `,firstName);
+            console.log(`lastName = `,lastName);
+
+            let fn, ln, fullName;
+
+            this.fn = firstName;
+            this.ln = lastName;
+
+            this.fullName = fn + " " + ln;
+
+            console.log(`fn = `, fn);
+            console.log(`ln = `,ln);
+        }
+    </script>
 </body>
 </html>

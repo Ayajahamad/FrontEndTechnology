@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTRUCTOR</title>
+</head>
+<body>
+    <center>
+        <h1>Custom Constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        // class constructor / Function Constructor
+
+        function Car(){
+
+            // Local Property
+            let a = 10;
+            alert(a);
+
+            // Constructor Property
+            this.x = 12;
+            this.title = 'Jeep';
+            this.model = 2023;
+            this.fuel = 'petrol';
+            this.display = function(){
+                document.write(`<h3>display function</h3>`)
+            }
+        }
+
+        // ref / instance of an constructor
+
+        let x = new Car(); // Costum constructor of Car function
+
+        console.log(x);
+
+        document.write(`<h3>${x.title}</h3>`); //  instance.key
+        document.write(`<h3>${x['model']}</h3>`); // instance[key]
+        document.write(`<h3>${x.fuel}</h3>`);
+        x.display();
+    </script>
+</body>
+</html>

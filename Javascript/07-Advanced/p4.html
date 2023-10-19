@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED-JS</title>
+</head>
+<body>
+    <center>
+        <h1>Lambda functions</h1>
+    </center>
+    <hr>
+
+    <h2>JAVASCRIPT FUNCTIONS</h2>
+    <ol>
+        <li>Local Function :- function A(){}</li>
+        <li>Expression Function :- let a = function(){} </li>
+        <li>Arrow Function :- let A () => {}</li>
+        <li>CallBack Function :- forEach(function(){})</li>
+        <li>Closer Function :- function A(){ function B(){} B();}</li>
+        <li>Anonymous Function or Immediate Invoked Function :- ()();</li>
+        <li>Lambda Function :- A = (x) => 100 + x;</li>
+    </ol>
+
+    <script>
+       // (params) => statement
+
+       // function A(){ return 10 + 20} document.write(A());
+
+       let sum = (x) => 100 + x;
+
+       document.write("sum = ",sum(100));
+    </script>
+</body>
+</html>

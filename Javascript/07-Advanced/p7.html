@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED-JS</title>
+</head>
+<body>
+    <center>
+        <h1>addEventListener</h1>
+    </center>
+    <hr>
+    <button type="button" id="myBtn">Click Me</button>
+    <script>
+        // Selecting button element
+        var btn = document.getElementById('myBtn');
+
+        // Defining custom functions
+        function sayHello() {
+            alert('Hi, how are you doing?');
+        }
+        function changeBg(){
+            btn.style.backgroundColor = "red";
+        }
+        function normalBg(){
+            btn.style.backgroundColor = "";
+        }
+        btn.addEventListener('click',sayHello);
+        btn.addEventListener('mouseover',changeBg);
+        btn.addEventListener('mouseleave',normalBg);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED-JS</title>
+</head>
+<body>
+    <center>
+        <h1>Removing Event Listener</h1>
+    </center>
+    <hr>
+    <button type="button" id="myBtn">Click ME</button>
+
+    <script>
+        // Defining function
+        function greetWorld(){
+            alert('Hello World');
+        }
+        // Selecting button element
+        var btn = document.getElementById('myBtn');
+
+        // adding Event listener
+        btn.addEventListener('click',greetWorld);
+
+        // removing Event listener
+        btn.removeEventListener('click',greetWorld);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED-JS</title>
+</head>
+<body>
+    <center>
+        <h1>set Constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        let emp = new Set();
+        emp.add('Raju');
+        emp.add('Ramesh');
+        emp.add('Suresh');
+        emp.add('Naresh');
+        emp.add('Mahesh');
+        emp.add('Raju'); // Removes the duplicate values
+
+        console.log(emp.entries());
+
+        emp.forEach(element => {
+            document.write(`<h1>${element}</h1>`);
+        });
+
+        // has()
+        console.log("has('Raju') = ", emp.has('Raju')); // true
+        console.log("has('Ramu') = ", emp.has('Ramu')); // false
+
+        emp.delete("Raju"); // delete set
+
+        console.log('After delete = ',emp.entries());
+        console.log("has('Raju') = ", emp.has('Raju'));
+
+    </script>
+</body>
+</html>

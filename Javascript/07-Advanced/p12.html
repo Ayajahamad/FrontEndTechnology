@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADVANCED-JS</title>
+</head>
+<body>
+    <center>
+        <h1>Strict Mode</h1>
+        <p>Strict Strict mode if you initialize a variable with declaring it using the var keyword</p>
+    </center>
+    <hr>
+
+    <script>
+        "use strict";
+
+        function sayHello(){
+            "use strict"
+            // var str;
+            str = "Hello world!"; // ReferenceError: str is not defined
+            console.log(str);
+        }
+        sayHello();
+
+        function doSomething(){
+            //var msg;
+            msg = "Hi , there";
+            return msg;
+        }
+        console.log(doSomething()); // ReferenceError: msg is not defined
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <center>
+        <h1>PROMISES</h1>
+    </center>
+    <hr>
+
+    <h3>What is Promise?</h3>
+    <p>Promise is built in constructor of Javascript.</p>
+    <p>A Promise object represents an operation</p>
+
+    <script>
+        let x = 200;
+        const myResponse = new Promise(function(resolve,reject){
+            if (x<100) {
+                resolve("Hi welcome to new promise")
+            } else {
+                reject("Oops....! not solved")
+            }
+        })
+        myResponse.then(function(value){
+            // fullfilled response
+            alert(value);
+        }).catch(function(errror){
+            // rejectd response
+            alert(errror);
+        });
+    </script>
+</body>
+</html>

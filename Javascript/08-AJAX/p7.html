@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <style>
+        #container{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-around;
+        }
+        div{
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #222;
+            margin: 5px;
+        }
+        div img{
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Promises</h1>
+    </center>
+    <hr>
+
+    <section id="container"></section>
+
+    <script>
+        const url = "https://dummyjson.com";
+
+        fetch(`${url}/products`,{
+            method:"GET"
+        })
+        .then(out => out.json())
+        .then(res => {
+            console.log('response = ', res.products);
+            printData(res.products);
+        }).catch(err =>{
+            console.log(err.message)
+        })
+
+        function printData(products){
+            let container = document.querySelector('#container');
+
+            products.forEach(element => {
+                let card = document.createElement('div');
+
+                let title = document.createElement('h4');
+                let price = document.createElement('p');
+                let img = document.createElement('img');
+             
+                title.textContent = element.title;
+                img.src = element.thumbnail;
+                price.innerHTML = `<strong>Price = &#8377; ${element.price}</strong>`;
+
+                card.appendChild(title);
+                card.appendChild(img);
+                card.appendChild(price);
+                
+                container.appendChild(card);
+            });
+        }
+
+    </script>
+</body>
+</html>

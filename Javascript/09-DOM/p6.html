@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DOM</title>
+</head>
+<body>
+    <section id="blk"></section>
+    <hr>
+    <button type="button" onclick="addContent()">Add Block</button>
+    <button type="button" onclick="removeContent()">Remove Block</button>
+
+    <script>
+        function addContent(){
+            let content = `
+                <h1>Welcome to JS</h1>
+                <h3>Subtitle of Js</h3>
+                <p>lorem knkjge eebie f3n2lueop2e 2m2ofb2fl2 fl d2iol2 d2lkfjp2kf 2mfo2g2ikf e3m, 237f 3f23if2uif23bf 23f23fu23 f32 uvfiu3fv ekf efbe o2e kfj3if jw wefw2nf 2dkwd bwd w dwq</p>
+                <button type="button" onclick="removeContent()">Remove Block</button>
+            `;
+            document.getElementById('blk').innerHTML = content;
+        }
+
+        function removeContent(){
+            document.getElementById('blk').innerHTML = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-DOM</title>
+</head>
+<body>
+    <center>
+        <h1>document.cookie</h1>
+    </center>
+    <hr>
+
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="viewCookie()">View Cookie</button>
+    <button onclick="resetCookie()">Clear Cookie</button>
+
+    <h3 id="output"></h3>
+
+    <script>
+        function setCookie() {
+            let id = "Akshay"
+            let name = "Be-Practical";
+
+            alert(Date())
+            document.cookie = `User ID = ${id}; expires = Tue Sep 12 2023 14:10:40; secure = true`;
+        }
+        function viewCookie() {
+            if(document.cookie.length != 0){
+                document.getElementById('output').innerHTML = document.cookie;
+            }else{
+                alert("Cookie not available.")
+            }
+        }
+        function resetCookie() {
+            
+                document.getElementById('output').innerHTML = "";
+            
+        }
+    </script>
+</body>
+</html>

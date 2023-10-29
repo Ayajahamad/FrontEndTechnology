@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BOM</title>
+</head>
+<body>
+    <script>
+        function getURL(){
+            alert("The URL of This page is :"+ window.location.href)
+        }
+    </script>
+    <button type="button" onclick="getURL()">Get URL</button>
+
+    <script>
+        //prints the protocol like http: or https:
+        document.write("<br>" + window.location.protocol+"<br>");
+
+        //prints the hostname with port like localhost or localhost:3000
+        document.write(window.location.host+"<br>");
+
+        //prints the hostname like localhost or www.example.com
+        document.write(window.location.hostname+"<br>");
+
+        //prints the port number
+        document.write(window.location.port+"<br>");
+
+        //prints the path name
+        document.write(window.location.pathname+"<br>");
+    </script>
+</body>
+</html>

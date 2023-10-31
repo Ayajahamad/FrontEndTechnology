@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BOM DILOG BOX</title>
+</head>
+<body>
+    <script>
+        var message = "Hi there! Click to cintinue.";
+        alert(message);
+
+        var result = confirm("Are you sure?");
+        if(result){
+            document.write("You clicked OK button..!");
+        }else{
+            document.write("You clicked CANCEL button..!");
+        }
+
+        var name = prompt("What is your name?");
+        if(name.length>0 && name != "null"){
+            document.write("Hi, " + name);
+        }else{
+            document.write("Anonymous..!")
+        }
+    </script>
+</body>
+</html>

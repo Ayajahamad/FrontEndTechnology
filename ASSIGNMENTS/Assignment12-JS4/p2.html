@@ -11,16 +11,16 @@
         <h1>Largest of 3 numbers</h1>
         <form action="">
             <label for="inp1">Enter First number :</label>
-            <input type="number" name="inp1" id="inp1"> <br>
+            <input type="number" name="inp1" id="inp1" required> <br>
 
             <label for="inp2">Enter Second number :</label>
-            <input type="number" name="inp2" id="inp2"><br>
+            <input type="number" name="inp2" id="inp2" required><br>
 
             <label for="inp3">Enter Third number :</label>
             <input type="number" name="inp3" id="inp3" required><br>
 
             <button type="button" onclick="findNumber()">Click to Ckeck</button>   
-            <button type="clear">Clear</button>  
+            <button type="clear" onclick=clrFun()>Clear</button>  
         </form>
         <div id="result">Result</div>
     </div>
@@ -31,15 +31,26 @@
             let inp2 = document.getElementById('inp2').value;
             let inp3 = document.getElementById('inp3').value;
 
-            if(inp1 > inp2 && inp1 > inp3){
-                document.getElementById('result').innerHTML = `in three numbers ${inp1} and ${inp2} and ${inp3} : ${inp1} is Greater.` 
+            if(inp1 === "" || inp2==="" || inp3 === ""){
+                document.getElementById('result').innerHTML = "Plz Enter all Three Inputs";
+                document.getElementById('result').style.color = "orangered"
+            }else if(inp1 === inp2 && inp1 === inp3){
+                document.getElementById('result').innerHTML = "Numbers are Equal";
+            }else if(inp1 > inp2 && inp1 > inp3){
+                document.getElementById('result').innerHTML = `in three numbers ${inp1} and ${inp2} and ${inp3} : ${inp1} is Greater.`; 
             }else if(inp2 > inp1 && inp2 > inp3){
-                document.getElementById('result').innerHTML = `in three numbers ${inp1} and ${inp2} and ${inp3} : ${inp2} is Greater.` 
+                document.getElementById('result').innerHTML = `in three numbers ${inp1} and ${inp2} and ${inp3} : ${inp2} is Greater.` ;
             } else if(inp3 > inp1 && inp3 > inp2){
-                document.getElementById('result').innerHTML = `in three numbers ${inp1} and ${inp2} and ${inp3} : ${inp3} is Greater.` 
+                document.getElementById('result').innerHTML = `in three numbers ${inp1} and ${inp2} and ${inp3} : ${inp3} is Greater.` ;
             }else{
                 document.getElementById('result').innerHTML = "Invalid input";
             }
+        }
+        function clrFun(){
+            let inp1 = document.getElementById('inp1').value="";
+            let inp2 = document.getElementById('inp2').value = "";
+            let inp3 = document.getElementById('inp3').value = "";
+            document.getElementById('result').innerHTML = "";
         }
     </script>
 </body>

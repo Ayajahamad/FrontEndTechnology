@@ -11,9 +11,9 @@
             <h1>Palindrome Number Finder</h1>
             <form action="">
                 <label for="inp">Enter a Number :</label>
-                <input type="number" name="inp" id="input1"> <br>
+                <input type="number" name="inp" id="input1" required> <br>
                 <button type="button" onclick="palindromNumber()">Click Here</button>
-                <button type="clear">Clear</button>
+                <button type="clear" onclick="clr()">Clear</button>
             </form>
             <div id="result">Result</div>
         </div>
@@ -23,7 +23,9 @@
                 let number1 =document.getElementById('input1').value;
                 let number = Number(number1);
 
-                if(number < 0){
+                if(number1 === ""){
+                    document.getElementById('result').innerHTML = "Plz enter any Number";
+                }else if(number < 0){
                     document.getElementById('result').innerHTML = "Plz enter positive number";
                 }else{
 
@@ -41,6 +43,9 @@
                         document.getElementById('result').innerHTML = `The Number ${originalNumber} is : Not a Palindrom`;
                     }
                 }
+            }
+            function clr(){
+                document.getElementById('result').innerHTML="";
             }
         </script>
     </body>

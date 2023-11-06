@@ -22,10 +22,15 @@
         function leapNumber(){
             let year = document.getElementById('input1').value;
 
-            if(year % 4 == 0 || year % 400 ==0){
+            if(year === ""){
+                document.getElementById('result').innerHTML = "Plz Enter any year";
+                document.getElementById('result').style.color = "orangered";
+            }else if(year % 4 == 0 || year % 400 == 0){
                 document.getElementById('result').innerHTML = `The year ${year} is a Leap year`;
+                document.getElementById('result').style.color = "green";
             }else{
                 document.getElementById('result').innerHTML = `The year ${year} is Not a Leap year`;
+                document.getElementById('result').style.color = "orangered";
             }
         }
     </script>

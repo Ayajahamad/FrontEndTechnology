@@ -11,7 +11,7 @@
         <h1>Check whether a Number is Even or Odd</h1>
         <form action="">
             <label for="inp">Enter a Number :</label>
-            <input type="number" name="inp" id="inp"><br>
+            <input type="number" name="inp" id="inp" required><br>
             <button type="button" onclick="numberCheck()">Click to Check</button>
             <button type="clear">Clear</button>
         </form>
@@ -22,7 +22,9 @@
         function numberCheck(){
             let num = document.getElementById('inp').value;
 
-            if(num % 2 == 0){
+            if(num == ""){
+                document.getElementById('result').innerHTML = "Plz Enter any Number"
+            }else if(num % 2 == 0){
                 document.getElementById('result').innerHTML = `The Number ${num} is : Even`;
             }else{
                 document.getElementById('result').innerHTML = `The Number ${num} is : Odd`;

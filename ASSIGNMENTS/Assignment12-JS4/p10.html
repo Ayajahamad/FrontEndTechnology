@@ -11,7 +11,7 @@
         <h1>Check whether a Alphabet is an Ovel or Consonant</h1>
         <form action="">
             <label for="inp">Enter a Charcter :</label>
-            <input type="text" name="inp" id="inp"><br>
+            <input type="text" name="inp" id="inp" required><br>
             <button type="button" onclick="checkOvel()">Click to Check</button>
             <button type="clear">Clear</button>
         </form>
@@ -29,8 +29,10 @@
             }else{
                 if(ovel == "A" || ovel == "E" || ovel == "I" || ovel == "O" || ovel == "U" || ovel == "a" || ovel == "e" || ovel == "i" || ovel == "o" || ovel == "u"){
                     document.getElementById('result').innerHTML="The character is a vowel";
-                }else{
+                }else if(ovel > "a" && ovel < "z" || ovel >"A" && ovel < "Z"){
                     document.getElementById('result').innerHTML="The character is a Consonent";
+                }else{
+                    document.getElementById('result').innerHTML="Plz Write an Alphabet";
                 }
             }
         }

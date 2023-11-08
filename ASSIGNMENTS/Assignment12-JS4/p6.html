@@ -11,7 +11,7 @@
         <h1>Sign of the Number</h1>
         <form action="">
             <label for="input1">Enter a Number :</label><br>
-            <input type="number" name="input1" id="input1"> <br>
+            <input type="number" name="input1" id="input1" required> <br>
             <button type="button" onclick="signNumber()">Click Here</button>
             <button type="clear">Clear</button>
         </form>
@@ -22,7 +22,9 @@
         function signNumber(){
             let sign = document.getElementById('input1').value;
 
-            if(sign < 0){
+            if(sign == ""){
+                document.getElementById('result').innerHTML = "Plz Enter any Number";
+            }else if(sign < 0){
                 document.getElementById('result').innerHTML = `The sign ${sign} is Negative`;
             }else if(sign == 0){
                 document.getElementById('result').innerHTML = `The sign ${sign} is Zero`;

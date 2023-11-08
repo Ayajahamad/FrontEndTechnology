@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Assignment</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Factorial Of A given Number</h1>
+            <form action="">
+                <label for="inp">Enter a Number :</label>
+                <input type="number" name="inp" id="inp" required><br>
+                <button type="button" onclick="factorialOfNumber()">Click to Check</button>
+                <button type="clear" onclick="clr()">Clear</button>
+            </form>
+            <div id="result">Result</div>
+        </div>
+
+        <script>
+            function factorialOfNumber(){
+                let num = +document.getElementById('inp').value;
+                
+                let x =1;
+                let result = 1;
+                while(x <= num){
+                    result=result*x;
+                    x++;
+                }
+                document.getElementById('result').innerHTML = `Factorial of a Number ${num} is : ${result}`;
+            }
+
+            function clr(){
+                document.getElementById('result').innerHTML = "";
+            }
+        </script>
+    </body>
+</html>

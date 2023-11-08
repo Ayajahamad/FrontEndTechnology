@@ -10,8 +10,8 @@
         <div class="container">
             <h1>Check whether a Number is an Amstrong or Not</h1>
             <form action="">
-                <label for="inp">Enter a Charcter :</label>
-                <input type="number" name="inp" id="inp"><br>
+                <label for="inp">Enter a Number :</label>
+                <input type="number" name="inp" id="inp" required><br>
                 <button type="button" onclick="checkAmstrong()">Click to Check</button>
                 <button type="clear">Clear</button>
             </form>
@@ -32,11 +32,14 @@
                     sum += Math.pow(parseInt(amstrong[i]), numberLength);  
                 }
                 console.log(sum);
-                if(sum == amstrong){
-                        document.getElementById('result').innerHTML=`Entered Number ${amstrong} is : A Amstrong Number`;
-                    }  else{
-                        document.getElementById('result').innerHTML=`Entered Number ${amstrong} is : Not an Amstrong Number`;
-                    }
+                
+                if(amstrong == ""){
+                    document.getElementById('result').innerHTML= " Plz Enter a Number"
+                }else if(sum == amstrong){
+                    document.getElementById('result').innerHTML=`Entered Number ${amstrong} is : A Amstrong Number`;
+                }else{
+                    document.getElementById('result').innerHTML=`Entered Number ${amstrong} is : Not an Amstrong Number`;
+                }
             }
         </script>
     </body>

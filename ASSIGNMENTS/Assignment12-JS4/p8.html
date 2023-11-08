@@ -11,13 +11,13 @@
         <h1>Check whether a triangle is equilateral, scalene, or isosceles?</h1>
         <form action="">
             <label for="inp1">Enter Side A value :</label>
-            <input type="number" name="inp1" id="inp1"><br>
+            <input type="number" name="inp1" id="inp1" required><br>
 
             <label for="inp2">Enter Side B value :</label>
-            <input type="number" name="inp2" id="inp2"><br>
+            <input type="number" name="inp2" id="inp2" required><br>
 
             <label for="inp3">Enter Side C value :</label>
-            <input type="number" name="inp3" id="inp3"><br>
+            <input type="number" name="inp3" id="inp3" required><br>
 
             <button type="button" onclick="triangleCheck()">Click to Check</button>
             <button type="clear">Clear</button>
@@ -31,7 +31,9 @@
             let inp2 = document.getElementById('inp2').value;
             let inp3 = document.getElementById('inp3').value;
 
-            if(inp1 == inp2 && inp2 == inp3 && inp3 == inp1){
+            if(inp1 == "" || inp2 == "" || inp3 == ""){
+                document.getElementById('result').innerHTML= "Plz Enter all three Sides Value";
+            }else if(inp1 == inp2 && inp2 == inp3 && inp3 == inp1){
                 document.getElementById('result').innerHTML="equilateral";
             }else if(inp1 == inp2 || inp2 == inp3 || inp3 == inp1){
                 document.getElementById('result').innerHTML="Isosceles";
@@ -39,6 +41,27 @@
                 document.getElementById('result').innerHTML="Scelence";
             }
         }
+// Another Function
+        function classifyTriangleType(angleA, angleB, angleC) {
+            if (angleA < 90 && angleB < 90 && angleC < 90) {
+                return "Acute Triangle";
+            } else if (angleA > 90 || angleB > 90 || angleC > 90) {
+                return "Obtuse Triangle";
+            } else if (angleA === 90 || angleB === 90 || angleC === 90) {
+                return "Right-Angled Triangle";
+            } else {
+                return "Invalid Input"; // This handles cases where the angles don't add up to 180 degrees (not a valid triangle).
+            }
+            }
+
+            // Example usage:
+            const angle1 = 45;
+            const angle2 = 45;
+            const angle3 = 90;
+
+            const triangleType = classifyTriangleType(angle1, angle2, angle3);
+            console.log(`The triangle is ${triangleType}`);
+
     </script>
 </body>
 </html>

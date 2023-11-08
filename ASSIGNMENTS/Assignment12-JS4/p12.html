@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Assignment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check Whether a triangle is valid or not</h1>
+        <form action="">
+            <label for="inp1">Enter Angle A :</label>
+            <input type="number" name="inp1" id="inp1" required><br>
+
+            <label for="inp2">Enter Angle B :</label>
+            <input type="number" name="inp2" id="inp2" required><br>
+
+            <label for="inp3">Enter Angle C :</label>
+            <input type="number" name="inp3" id="inp3" required><br>
+
+            <button type="button" onclick="triangleCheck()">Click to Check</button>
+            <button type="clear">Clear</button>
+        </form>
+        <div id="result">Result</div>
+    </div>
+
+    <script>
+        function triangleCheck(){
+            let inp1 = +document.getElementById('inp1').value;
+            let inp2 = +document.getElementById('inp2').value;
+            let inp3 = +document.getElementById('inp3').value;
+
+            if(inp1 == "" || inp2 == "" || inp3 == ""){
+                document.getElementById('result').innerHTML= "Plz Enter all three Sides Value";
+                document.getElementById('result').style.color="orangered";
+            }
+            else if((inp1+inp2+inp3 == 180) && (inp1 !== 0 || inp2 !== 0 || inp3 !== 0)){
+                document.getElementById('result').innerHTML= "Valid Tringle";
+                document.getElementById('result').style.color="green";
+            }else{
+                document.getElementById('result').innerHTML= "InValid Tringle";
+                document.getElementById('result').style.color="orangered";
+            }
+        }
+// Another Function
+        // function classifyTriangleType(angleA, angleB, angleC) {
+        //     if (angleA < 90 && angleB < 90 && angleC < 90) {
+        //         return "Acute Triangle";
+        //     } else if (angleA > 90 || angleB > 90 || angleC > 90) {
+        //         return "Obtuse Triangle";
+        //     } else if (angleA === 90 || angleB === 90 || angleC === 90) {
+        //         return "Right-Angled Triangle";
+        //     } else {
+        //         return "Invalid Input"; // This handles cases where the angles don't add up to 180 degrees (not a valid triangle).
+        //     }
+        //     }
+
+        // else if(inp1<90 && inp2<90 && inp3<90){
+        //         document.getElementById('result').innerHTML= "Acute Triangle";
+        //         document.getElementById('result').style.color="green";
+        //     }
+
+    </script>
+</body>
+</html>

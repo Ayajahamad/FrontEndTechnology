@@ -1,0 +1,16 @@
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .container>div:first-child{
+        order: 3;
+    }
+}
+@media(min-width:769px) and (max-width:1200px){
+    .container{
+        flex-flow: column wrap;
+    }
+    .container>div:last-child{
+        order: 2;
+    }
+}

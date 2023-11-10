@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .container{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container>div{
+            line-height: 3;
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .container>div>input{
+            padding: 10px;
+            border: 1px solid blue;
+            text-align: center;
+            font-size: 15px;
+        }
+        .container>div>button{
+            padding: 10px 5px;
+            background-color: red;
+            border: 1px solid red;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .container>div>p{
+            color: #fff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div>
+            <h3>Enter a Single Character Here:</h3>
+            <input type="text" name="inp" id="inp" placeholder="Enter a single character"><br>
+            <button type="button" onclick="checkInp()">Click to Check</button>
+            <button type="clear" onclick="clr()">Clear Here</button>
+            <p id="result"></p>
+        </div>
+    </section>
+
+    <script>
+        function checkInp(){
+            let inp = document.getElementById('inp').value;
+            let alpha = /^[a-zA-Z]$/;
+
+            let digit = /^\d+$/;
+
+            if(inp == ""){
+                document.getElementById('result').innerHTML = "plz Enter the input";
+                document.getElementById('result').style.color ="orangered"
+            }else if(inp.length > 1){
+                document.getElementById('result').innerHTML = "plz enetr a Single Character";
+                document.getElementById('result').style.color ="red"
+            }
+            else if(alpha.test(inp) == true){
+                document.getElementById('result').innerHTML = `Entered input <b>${inp}</b> : is a Alphabet`;
+                document.getElementById('result').style.color ="green";
+            }else if(digit.test(inp) == true){
+                document.getElementById('result').innerHTML = `Entered input ${inp} : is a Digit`;
+                document.getElementById('result').style.color ="green";
+            }else{
+                document.getElementById('result').innerHTML = `Entered input ${inp} : is a Special Character`;
+                document.getElementById('result').style.color ="green";
+            }
+        }
+        function clr(){
+            document.getElementById('result').innerHTML = "";
+            document.getElementById('inp').value = "";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Numbers of days in a month</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .container>div{
+            padding: 10px;
+            text-align: center;
+            border: 2px solid black;
+        }
+        .container>div>h2{
+            text-decoration: underline;
+        }
+        .container>div>input{
+            padding: 7px;
+        }
+        .container>div>button{
+            padding: 8px;
+            background-color: red;
+            border: 1px solid orangered;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .datalist{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .datalist>div{
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .datalist>div>h2{
+            text-decoration: underline;
+        }
+        .datalist>div>input{
+            padding: 6px;
+        }
+        .datalist>div>input:focus{
+            outline: none;
+        }
+        .datalist>div>button{
+            padding: 6px;
+            border-radius: 5px;
+            border: 1px solid red;
+            background-color: red;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div>
+            <h2>Find Number Of days In a month</h2>
+            <input type="number" name="inp" id="inp" placeholder="Enter the month number" max="12"><br>
+            <button type="button" onclick="daysInMonth()">Click to Check</button>
+            <p id="result"></p>
+        </div>
+    </section>
+    <script>
+        function daysInMonth(){
+            let inp = document.getElementById('inp').value;
+
+            if(inp == ""){
+                document.getElementById('result').innerHTML = "Plz Enter a Month Number";
+                document.getElementById('result').style.color = "orangered";
+            }else if(inp == 1||inp==3||inp==5||inp==7||inp==8||inp==10|inp==12){
+                document.getElementById('result').innerHTML = "This Month Have 31 Days";
+            }else if(inp==4||inp==6||inp==9||inp==11){
+                document.getElementById('result').innerHTML = "This Month Have 30 Days";
+            }else if(inp==2){
+                document.getElementById('result').innerHTML = "This Month Have 28/29 Days";
+            }else{
+                document.getElementById('result').innerHTML = "Invalid Input";
+                document.getElementById('result').style.color = "orangered";
+            }
+        }
+    </script>
+    
+    <section class="datalist">
+        <div>
+            <h2>Find Number Of days In a month</h2>
+            <input type="text" name="inp1" id="inp1" list="month" placeholder="Choose a month here"> <br>
+            <datalist id="month">
+                <option value="January"></option>
+                <option value="February"></option>
+                <option value="March"></option>
+                <option value="April"></option>
+                <option value="May"></option>
+                <option value="Jun"></option>
+                <option value="July"></option>
+                <option value="Agust"></option>
+                <option value="September"></option>
+                <option value="October"></option>
+                <option value="November"></option>
+                <option value="December"></option>
+            </datalist>
+            <button type="button" onclick="daysMonth()">Click to see the Days</button>
+            <button type="clear" onclick="clrData()">Clear</button>
+            <h4 id="result1"></h4>
+        </div>
+    </section>
+
+    <script>
+        function daysMonth(){
+            let inp1 = document.getElementById('inp1').value;
+            let result1 = document.getElementById('result1');
+
+            switch (true) {
+                case (inp1==""):
+                    result1.innerHTML="plz Select a Month";
+                    result1.style.color = "red";
+                    break;
+                
+                case (inp1=="January"||inp1=="March"||inp1=="May"||inp1=="July"||inp1=="Agust"||inp1=="October"||inp1=="December"):
+                result1.innerHTML=`Your Month ${inp1} Have 31 Days.`;
+                result1.style.color = "green";
+                break;
+
+                case (inp1=="April"||inp1=="Jun"||inp1=="September"||inp1=="November"):
+                result1.innerHTML=`Your Month ${inp1} Have 30 Days.`;
+                result1.style.color = "green";
+                break;
+
+                case (inp1=="February"):
+                result1.innerHTML=`Your Month ${inp1} Have 28/29 Days.`;
+                result1.style.color = "green";
+                break;
+
+                default:
+                result1.innerHTML="Invalid Input.";
+                result1.style.color = "orangered";
+            }
+        }
+
+        function clrData(){
+            result1.innerHTML="";
+            inp1.value="";
+        }
+
+    </script>
+</body>
+</html>

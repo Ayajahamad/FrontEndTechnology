@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Intrest Calculator</h2>
+        <form action="">
+            <label for="principle">Enter The Principle :</label>
+            <input type="number" name="principle" id="principle"><br><br>
+            <label for="time">Enter The Time :</label>
+            <input type="number" name="time" id="time" placeholder="In Years"><br><br>
+            <label for="rate">Enter The Rate :</label>
+            <input type="number" name="rate" id="rate">
+
+            <button type="button" onclick="simpleIntrest();">CALCULATE SI</button>
+        </form>
+        <p id="simpleIntrest">Result</p>
+    </div>
+    <script>
+        function simpleIntrest(){
+            let principle = document.getElementById('principle').value;
+            let time = document.getElementById('time').value;
+            let rate = document.getElementById('rate').value;
+
+            let SI = (principle*time*rate)/100;
+
+            document.getElementById('simpleIntrest').innerHTML = SI;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Contact Form</h1>
+            <form action="" onsubmit="formSubmit(event)" onreset="rsetValue()" autocomplete="on">
+                <label for="name">Full Name</label><br>
+                <input type="text" name="name" id="name">
+                <p id="error"></p>
+    
+                <label for="mail">Email id</label><br>
+                <input type="text" name="mail" id="mail">
+                <p id="error1"></p>
+    
+                <label for="number">Mobile number</label><br>
+                <input type="text" name="number" id="number">
+                <p id="error2"></p>
+    
+                <label for="city">City</label><br>
+                <input type="text" name="city" id="city" placeholder="Choose city name" list="citys">
+                <datalist id="citys">
+                    <option value="bengalore"></option>
+                    <option value="bengalore"></option>
+                    <option value="bengalore"></option>
+                </datalist>
+                <p id="error3"></p>
+    
+                <span>Gender</span><br>
+                <label for="gender">
+                    <input type="radio" name="gender" id="male">Male
+                </label>
+                <label for="gender"><input type="radio" name="gender" id="female">
+                Female</label>
+                <p id="error4"></p>
+    
+                <span>Langauge(Optional)</span><br>
+                <label for="kan">
+                    <input type="checkbox" name="myCheckbox" id="kan">Kannada
+                </label>
+                <label for="eng">
+                    <input type="checkbox" name="myCheckbox" id="eng">English
+                </label>
+                 <label for="hin">
+                    <input type="checkbox" name="myCheckbox" id="hin">Hindi
+                </label>
+                 <label for="tam">
+                    <input type="checkbox" name="myCheckbox" id="tam">Tamil
+                </label>
+                 <label for="tel">
+                    <input type="checkbox" name="myCheckbox" id="tel">Telugu
+                </label>
+                <p id="error5"></p>
+    
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button> 
+            </form>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Content</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Full Name :</td>
+                    <td id="result1"></td>
+                </tr>
+                <tr>
+                    <td>Email Id :</td>
+                    <td id="result2"></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number :</td>
+                    <td id="result3"></td>
+                </tr>
+                <tr>
+                    <td>City :</td>
+                    <td id="result4"></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td id="result5"></td>
+                </tr>
+                <tr>
+                    <td>Langauge :</td>
+                    <td id="result6"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        function formSubmit(event){
+            event.preventDefault();
+
+            let name = document.getElementById('name').value;
+            let mail = document.getElementById('mail').value;
+            let number = document.getElementById('number').value;
+            let city = document.getElementById('city').value;
+
+            let name_Flag = false;
+            let mail_Flag = false;
+            let number_Flag = false;
+            let city_Flag = false;
+
+            var error = document.getElementById('error');
+            var error1 = document.getElementById('error1');
+            var error2 = document.getElementById('error2');
+            var error3 = document.getElementById('error3');
+            var error4 = document.getElementById('error4');
+            var error5 = document.getElementById('error5');
+
+            //Result
+            var result1 = document.getElementById('result1');
+            var result2 = document.getElementById('result2');
+            var result3 = document.getElementById('result3');
+            var result4 = document.getElementById('result4');
+            var result5 = document.getElementById('result5');
+            var result6 = document.getElementById('result6');
+            var result7 = document.getElementById('result7');
+
+            // Name Validation
+            ///[\s'’-]{2,}/
+            var namePattern = /^[A-Za-z\s'-]*(?:\s{0,2}[A-Za-z\s'-]*)*$/;
+            var spacePattern = /[\s'’-]{2,}/;
+
+            if(name === ""){
+                error.innerText = "Name field cannot be Empty";
+                error.style.color = "orangered";
+            }else{
+                if(namePattern.test(name) == false || name.length < 4 || spacePattern.test(name) == true){
+                    error.innerText = "Plz Enter Correct Name (minimum 4 characters)";
+                    error.style.color = "orangered";
+                }else{
+                    error.innerText = "Valid Name";
+                    error.style.color = "green";
+                    result1.innerText = name;
+
+                    name_Flag = true;
+                }
+            }
+
+            //Email Validation
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(mail === ""){
+                error1.innerText = "Email field Cannot be Empty";
+                error1.style.color = "orangered"
+            }else{
+                if(emailPattern.test(mail) == false){
+                    error1.innerText = "Plaz Write Valid Mail";
+                error1.style.color = "orangered"
+                }else{
+                    error1.innerText = "Valid Mail";
+                    error1.style.color = "green"
+                    result2.innerText = mail;
+
+                    mail_Flag = true;
+                }
+            }
+
+            //Mobile number validation
+            var phonePattern = /^[6789]\d{9}$/;
+            if(number == ""){
+                error2.innerText = "Number Field cannot be Empty";
+                error2.style.color = "orangered";
+            }else{
+                if(phonePattern.test(number) == false){
+                    error2.innerText = "Plz Enter Valid Number(shoud be 10 digits)";
+                    error2.style.color = "orangered";
+                }else{
+                    error2.innerText = "Valid Number";
+                    error2.style.color = "green";
+                    result3.innerText = number;
+
+                    name_Flag = true;
+                }
+            }
+
+            //City Validation
+            if(city === ""){
+                error3.innerText = "Plz Select City Name";
+                error3.style.color = "orangered"
+            }else{
+                error3.innerText = "Selected";
+                error3.style.color = "green";
+                result4.innerText = city;
+
+                city_Flag = true;
+            }
+
+            //Gender Validation
+            var male = document.getElementById('male');
+            var female = document.getElementById('female');
+            var checkedRadioButton = document.querySelector('input[name="gender"]:checked');
+
+            if(!checkedRadioButton){
+                error4.innerText = "Plz Select the Gender";
+                error4.style.color = "orangered";
+            }else{
+                error4.innerText = "Selected";
+                error4.style.color = "green";
+
+                switch(true){
+                    case male.checked:
+                    result5.innerText = "male";
+                    break;
+
+                    case female.checked:
+                    result5.innerText = "female";
+                    break;
+                }
+            }
+
+            //Langauge Validation
+            let check1 = document.getElementById('kan');
+            let check2 = document.getElementById('eng');
+            let check3 = document.getElementById('hin');
+            let check4 = document.getElementById('tam');
+            let check5 = document.getElementById('tel');
+
+            if(check1.checked || check2.checked || check3.checked || check4.checked || check5.checked){
+                error5.innerText = "Selected";
+                error5.style.color = "green";
+            }
+            else{
+                error5.innerText = "Plz Select the Langauge";
+                error5.style.color = "orangered";
+            }
+            switch(true){
+                case check1.checked && check2.checked && check3.checked && check4.checked && check5.checked:
+                result6.innerText = "Kannada,English,Hindi,Tamil,Telugu";
+                break;
+
+                case check1.checked && check2.checked && check3.checked && check4.checked:
+                result6.innerText = "Kannada,English,Hindi,Tamil";
+                break;
+
+                case check1.checked && check2.checked && check3.checked:
+                result6.innerText = "Kannada,English,Hindi";
+                break;
+
+                case check1.checked && check2.checked && check4.checked:
+                result6.innerText = "Kannada,English,Tamil";
+                break;
+
+                case check1.checked && check2.checked && check5.checked:
+                result6.innerText = "Kannada,English,Telgu";
+                break;
+
+                case check2.checked && check3.checked && check4.checked:
+                result6.innerText = "English,Hindi,Tamil";
+                break;
+
+                case check1.checked && check2.checked:
+                result6.innerText = "Kannada,English";
+                break;
+
+                case check1.checked && check3.checked:
+                result6.innerText = "Kannada,Hindi";
+                break;
+
+                case check2.checked && check3.checked:
+                result6.innerText = "English,Hindi";
+                break;
+
+                case check1.checked:
+                result6.innerText = "Kannada";
+                break;
+
+                case check2.checked:
+                result6.innerText = "English";
+                break;
+
+                case check3.checked:
+                result6.innerText = "Hindi";
+                break;
+
+                case check4.checked:
+                result6.innerText = "Tamil";
+                break;
+
+                case check5.checked:
+                result6.innerText = "Telgu";
+                break;
+            }
+
+            if(name_Flag==true&&mail_Flag==true&&city_Flag==true&&number_Flag==true){
+                result1.innerText = name;   
+            }
+
+        }
+
+        // Reset value Function
+        function rsetValue(){
+            error.innerText = "";
+            error1.innerText = "";
+            error2.innerText = "";
+            error3.innerText = "";
+            error4.innerText = "";
+            error5.innerText = ""; 
+            let city = document.getElementById('city').value="";  
+        }
+    </script>
+</body>
+</html>

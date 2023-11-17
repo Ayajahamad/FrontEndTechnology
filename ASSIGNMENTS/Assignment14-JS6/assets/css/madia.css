@@ -1,0 +1,11 @@
+@media(max-width:760px){
+    table{
+        width: 80%;
+    }
+}
+
+@media(min-width:761px) and (max-width:1200px){
+    table{
+        width: 60%;
+    }
+}

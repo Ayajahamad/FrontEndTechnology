@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/madia.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="cal">
+            <table>
+                <tr>
+                    <td colspan="4"><h1>CALCULATOR</h1></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><input type="text" name="screen" id="screen"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="btn1" id="btn1" value="7" onclick="screenValue(7)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="8" onclick="screenValue(8)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="9" onclick="screenValue(9)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="/" onclick="screenValue('/')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="btn1" id="btn1" value="4" onclick="screenValue(4)"> </td>
+                    <td><input type="button" name="btn1" id="btn1" value="5" onclick="screenValue(5)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="6" onclick="screenValue(6)"> </td>
+                    <td><input type="button" name="btn1" id="btn1" value="*" onclick="screenValue('*')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="btn1" id="btn1" value="1" onclick="screenValue(1)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="2" onclick="screenValue(2)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="3" onclick="screenValue(3)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="-" onclick="screenValue('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="btn1" id="btn1" value="." onclick="screenValue('.')"></td>
+                    <td colspan="2"><input type="button" name="btn1" id="btn1" value="0" onclick="screenValue(0)"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="+" onclick="screenValue('+')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="btn1" id="btn1" value="%" onclick="screenValue('%')"></td>
+                    <td colspan="2"><input type="button" name="btn1" id="btn1" value="Clear" onclick="clearValue()"></td>
+                    <td><input type="button" name="btn1" id="btn1" value="=" onclick="calResult()"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function screenValue(value){
+            document.getElementById('screen').value += value;
+        }
+
+        function clearValue(){
+            document.getElementById('screen').value = "";
+        }
+
+        function calResult(){
+            document.getElementById('screen').value = eval(document.getElementById('screen').value);
+        }
+    </script>
+</body>
+</html>

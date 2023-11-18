@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Array</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="container">
+        <div>
+            <h1>Find Diplicate Array</h1>
+            <b>Enter an array With (comma sepaarted)</b><br>
+            <input type="text" name="inp" id="inp" placeholder="Enter an array"><br>
+            <button type="button" onclick="dupArr()">SUBMIT</button>
+            <button type="clear" onclick="clrVal()">CLEAR</button>
+            <h3>Duplicate Values :</h3>
+            <p id="result"></p><br>
+            <button type="button" onclick="revArray()">Reverse Array</button>
+            <h3>Reversed Array :</h3>
+            <p id="result1"></p><br>
+        </div>
+    </section>
+
+    <script>
+       function dupArr(){
+
+        let arrVal = document.getElementById('inp').value;
+
+        let arr = arrVal.split(',');
+
+        console.log(arr.length);
+
+        let dup = [];
+        let reversed = [];
+
+
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i+1; j < arr.length; j++) {
+                    if(arr[i] === arr[j]){
+                        dup.push(arr[i]);
+                        break;
+                    }
+                }
+            }
+            if(dup.length === 0){
+                document.getElementById('result').innerText = "You dont have a duplicate array";
+                document.getElementById('result').style.color = "red";
+                    document.getElementById('result').style.fontSize = "20px";
+                    document.getElementById('result').style.backgroundColor = "white";
+                    document.getElementById('result').style.margin = "10px 0px";
+                    document.getElementById('result').style.padding = "10px 0px";
+                    document.getElementById('result').style.transition = "1s ease-in-out";
+            }else{
+                document.getElementById('result').innerText = dup;
+                document.getElementById('result').style.color = "green";
+                document.getElementById('result').style.fontSize = "20px";
+                document.getElementById('result').style.backgroundColor = "white";
+                document.getElementById('result').style.margin = "10px 0px";
+                document.getElementById('result').style.padding = "10px";
+                document.getElementById('result').style.transition = "1s ease-in-out"
+            }
+            
+        
+       }
+
+       function clrVal(){
+            document.getElementById('inp').value = "";
+            document.getElementById('result').innerHTML = "";
+            document.location.reload();
+        }
+
+        // Reverse An Array
+        function revArray(){
+
+            let reversed = [];
+
+            let arrVal = document.getElementById('inp').value;
+            let arr = arrVal.split(',');
+
+            //console.log(arr);
+            
+            
+            for (let index = arr.length-1; index >= 0; index--) {
+            reversed.push(arr[index]);
+            }
+            console.log(reversed.length)
+            document.getElementById('result1').innerHTML = reversed;
+        }
+
+    </script>
+</body>
+</html>

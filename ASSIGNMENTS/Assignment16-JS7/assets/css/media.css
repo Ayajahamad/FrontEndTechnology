@@ -1,0 +1,23 @@
+@media(max-width:768px){
+    #video,#vedeo1{
+        display: none;
+    }
+    #video2{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+@media(min-width:769px) and (max-width:1200px){
+    #video,#vedeo2{
+        display: none;
+    }
+    #video1{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+    }
+}

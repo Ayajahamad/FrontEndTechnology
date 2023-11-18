@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <video src="assets/media/video (720p).mp4" autoplay loop muted id="video"></video>
+    <video src="assets/media/production_id_5077474 (2160p).mp4" autoplay loop muted id="video2"></video>
+    <video src="assets/media/video (540p).mp4" autoplay loop muted id="video1"></video>
+
+    <section class="container">
+        <div>
+            <h1>String Reverse</h1>
+            <input type="text" name="inp" id="inp" placeholder="Enter a String"><br>
+            <button type="button" onclick="revStr()">SUBMIT</button>
+            <button type="clear" onclick="clrVal()">CLEAR</button>
+            <h1>Result :</h1>
+            <p id="result"></p>
+        </div>
+    </section>
+    <script>
+        function revStr(){
+            var word = document.getElementById('inp').value;
+            let ans = "";
+
+            if(word == ""){
+                document.getElementById('result').innerText = "Input field cannot be empty";
+                document.getElementById('result').style.color = "red";
+                document.getElementById('result').style.fontSize = "20px";
+                document.getElementById('result').style.backgroundColor = "white";
+                document.getElementById('result').style.margin = "10px 0px";
+                document.getElementById('result').style.padding = "10px";
+                document.getElementById('result').style.transition = "1s ease-in-out"
+            }else{
+                if(word.length < 2){
+                    document.getElementById('result').innerText = "plz write more then 1 char";
+                    document.getElementById('result').style.color = "red";
+                    document.getElementById('result').style.fontSize = "20px";
+                    document.getElementById('result').style.backgroundColor = "white";
+                    document.getElementById('result').style.margin = "10px 0px";
+                    document.getElementById('result').style.padding = "10px";
+                    document.getElementById('result').style.transition = "1s ease-in-out";
+                }else{
+
+            
+
+            for (let index = word.length-1; index >= 0; index--) { 
+                console.log(word[index])
+                document.getElementById('result').innerText = ans+=word[index];
+                document.getElementById('result').style.color = "green";
+                document.getElementById('result').style.fontSize = "20px";
+                document.getElementById('result').style.backgroundColor = "white";
+                document.getElementById('result').style.margin = "10px 0px";
+                document.getElementById('result').style.padding = "10px";
+                document.getElementById('result').style.transition = "1s ease-in-out"
+            }
+        }
+            }
+        }
+
+        function clrVal(){
+            document.getElementById('inp').value = "";
+            document.getElementById('result').innerHTML = "";
+            document.location.reload();
+        }
+    </script>
+</body>
+</html>

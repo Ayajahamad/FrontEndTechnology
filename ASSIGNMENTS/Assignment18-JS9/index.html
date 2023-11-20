@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Cards</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="employee-container">
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const employees = [
+                {
+                    id: 1,
+                    name: "John Doe",
+                    position: "Software Engineer",
+                    imageSrc: "assets/images/img2.jpg",
+                },
+                {
+                    id: 2,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img3.jpg",
+                },
+                {
+                    id: 3,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img4.jpg",
+                },
+                {
+                    id: 4,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img5.jpg",
+                },
+                {
+                    id: 5,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img6.jpg",
+                },
+                {
+                    id: 6,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img7.jpg",
+                },
+                {
+                    id: 7,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img8.jpg",
+                },
+                {
+                    id: 8,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img9.jpg", 
+                },
+                {
+                    id: 9,
+                    name: "Jane Smith",
+                    position: "UI Designer",
+                    imageSrc: "assets/images/img10.jpg",
+                },
+            ];
+
+            function createEmployeeCards() {
+                const container = document.getElementById("employee-container");
+
+                employees.forEach(employee => {
+                    const card = document.createElement("div");
+                    card.classList.add("employee-card");
+
+                    card.innerHTML = `
+                        <h1>Employee ${employee.id}</h2>
+                        <img src="${employee.imageSrc}" alt="${employee.name}'s Image">
+                        <h2>${employee.name}</h2>
+                        <p>${employee.position}</p>
+                        <button class="edit-button" data-id="${employee.id}">Edit</button>
+                        <button class="delete-button" data-id="${employee.id}">Delete</button>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+            createEmployeeCards();
+
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("edit-button")) {
+                    const employeeId = event.target.getAttribute("data-id");
+
+                    // edit function
+                    alert(`Edit employee with ID ${employeeId}`);
+                }
+
+                if (event.target.classList.contains("delete-button")) {
+                    const employeeId = event.target.getAttribute("data-id");
+                    // dlt function
+                    alert(`Delete employee with ID ${employeeId}`);
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

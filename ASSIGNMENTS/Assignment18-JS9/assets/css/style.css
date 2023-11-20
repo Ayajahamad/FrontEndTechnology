@@ -1,0 +1,68 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+#employee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 20px;
+    /* background: url(assets/images/bg-1.jpg) no-repeat center; */
+    background-size: cover;
+}
+.employee-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    background-color: rgba(248, 248, 248,0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 1s ease-in-out;
+}
+.employee-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: 1s ease-in-out;
+    border: 2px solid #007BFF;
+}
+.employee-card:hover img{
+    transform: scale(-1) rotate(180deg);
+    border: 2px solid rgb(238, 214, 166);
+}
+.employee-card:hover{
+    background-color: rgb(252, 245, 236);
+}
+/*edit and delete buttons */
+.edit-button,
+.delete-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #0056b3;
+}
+h1{
+    color: #007BFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+h2 {
+    font-size: 18px;
+    margin: 0;
+}
+p {
+    font-size: 14px;
+    margin: 10px 0;
+}

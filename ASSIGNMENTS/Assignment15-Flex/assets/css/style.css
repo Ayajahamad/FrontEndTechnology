@@ -1,0 +1,285 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/* FIRST BANNER CODE */
+.banner{
+    background: url(../images/banner-bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+/* HEAD CODE */
+.banner>.head{
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+.banner>.container>img{
+    height: 64px;
+}
+.banner>.container>nav>ul{
+    list-style: none;
+}
+.banner>.container>nav>ul>li{
+    display: inline-block;
+    padding: 15px;
+    margin-left: 10px;
+}
+.banner>.container>nav>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+}
+.banner>.container>nav>ul>li:hover a{
+    color: gray;
+}
+.banner>.container>nav>ul>li:last-child{
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 1s ease-in-out;
+}
+.banner>.container>nav>ul>li:last-child:hover{
+    background-color: rgb(35, 44, 44);
+}
+.banner>.container>nav>ul>li:last-child:hover a{
+    color: #fff;
+}
+.banner>.container>nav>ul>li:last-child a{
+    color: gray;
+}
+.banner>.container>nav>ul>li:last-child a>.fa-plus{
+    background-color: gray;
+    color: #fff;
+    padding: 1px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+/* BANNER CODE */
+.banner>.home{
+    margin-top: 130px;
+}
+.banner>.home>div:first-child{
+    color: #fff;
+    text-align: center;
+    margin: 10px 50px;
+}
+.banner>.home>div:first-child>h1{
+    font-size: 45px;
+    margin: 15px auto;
+}
+.banner>.home>.search{
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 50px;
+}
+.banner>.home>.search>select,input,button{
+    border: none;
+    padding: 20px;
+    background-color: #fff;
+    width: 24%;
+    border-radius: 5px;
+}
+.banner>.home>.search>select:first-child,input{
+    border-right: 1px solid grey;
+}
+.banner>.home>.search>button{
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    transition: 1s ease-in-out;
+}
+.banner>.home>.search>button:hover{
+    background-color: rgb(35, 44, 44);
+}
+.banner>.home>.search>button>.fa-magnifying-glass{
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 2px;
+    font-size:15px;
+    color: gray;
+    margin-right: 10px;
+}
+.banner>.home1{
+    justify-content: space-evenly;
+    margin: 10px 100px;
+    text-align: center;
+    color: #fff;
+}
+.banner>.home1>figure>img{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    transition: 1s ease-in-out;
+}
+.banner>.home1>figure>img:hover{
+    background-color: rgb(35, 44, 44);
+    color: #fff;
+}
+/* CENTER CODE */
+center{
+    margin: 80px 50px;
+    line-height: 2;
+}
+center>h1{
+    font-size: 40px;
+}
+
+/* BANNER1 CODE */
+.banner1>.categori{
+    margin: 10px 50px;
+    background-color: rgb(24, 24, 38);
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 10px;
+}
+.banner1>.categori>.images{
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    background-color: gray;
+}
+.banner1>.categori>.images>div{
+    padding: 30px;
+    transition: 1s ease-in-out;
+    width: 72%;
+}
+.banner1>.categori>.images>div:hover{
+    background-color: rgb(24, 24, 38);
+}
+.banner1>.categori>.images>div:hover img{
+    background-color: gray;
+    color: #fff;
+}
+.banner1>.categori>.images>div>img{
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    padding: 15px;
+    border-radius: 50px;
+    margin-right: 20px;
+    transition: 1s ease-in-out;
+}
+.banner1>.categori>div:nth-child(2){
+    width: 25%;
+    text-align: justify;
+    line-height: 2;
+}
+.banner1>.categori>div:nth-child(2)>h2{
+    margin-bottom: 20px;
+}
+.banner1>.categori>div:nth-child(2)>p{
+    margin-bottom: 20px;
+}
+.banner1>.categori>div:nth-child(2)>button{
+    width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    transition: 1s ease-in-out;
+}
+.banner1>.categori>div:nth-child(2)>button>.fa-eye{
+    margin-right: 20px;
+    background-color: gray;
+    padding: 2px;
+    border-radius: 50px;
+}
+.banner1>.categori>div:nth-child(2)>button:hover{
+    background-color: rgb(35, 44, 44);
+    color: #fff;
+}
+.banner1>.categori>div:last-child{
+    width: 35%;
+    padding: 20px;
+}
+.banner1>.categori>div:last-child>img{
+    width: 350px;
+    height: 420px;
+    border-radius: 10px;
+}
+
+/* LISTING CODE */
+.listing{
+    margin: 10px 50px;
+    justify-content: space-between;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    padding: 0px 50px 0px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.listing>div:first-child>img{
+    width: 450px;
+    border-radius: 10px 0px 0px 10px;
+    height: 405px;
+}
+.listing>div:nth-child(2){
+    line-height: 2.5;
+    padding: 20px;
+    text-align: start;
+    width: 30%;
+}
+.listing>div:nth-child(2)>p{
+    color: gray;
+    font-size: 20px;
+}
+.listing>div:nth-child(2)>p>.fa-indian-rupee-sign,.fa-bed,.fa-bath{
+    padding: 5px;
+    margin-right: 6px;
+    color: gray;
+}
+.listing>div:nth-child(2)>p>.fa-indian-rupee-sign{
+    background-color: rgb(37, 32, 32);
+    border-radius: 50px;
+}
+.listing>div:last-child{
+    padding: 20px;
+}
+.listing>div:last-child>p{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 1s ease-in-out;
+}
+.listing>div:last-child>p:hover{
+    background-color: rgb(35, 44, 44);
+    color: #fff;
+}
+.listing>div:last-child>p>.fa-eye{
+    background-color: gray;
+    color: #fff;
+    padding: 3px;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+
+.review{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 180px;
+}
+.footer{
+    margin: 0px 50px;
+    align-content: baseline;
+    justify-content: space-between;
+    line-height: 3;
+}
+.footer>div:first-child{
+    width: 25%;
+}
+.container>#last{
+    margin: 10px 50px;
+    text-align: center;
+}
+hr{
+    border: 1px solid lightgray;
+}

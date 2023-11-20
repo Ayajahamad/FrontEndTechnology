@@ -23,6 +23,21 @@
         text-align: center;
         justify-content: center;
     }
+    .contactUs>section>img{
+        width: 100%;
+    }
+    .contactUs>section:last-child{
+        width: 100%;
+    }
+    .contactUs>section>form,.contactUs>section>form>table{
+        width: 100%;
+    }
+    .testimonial{
+        padding: 50px 100px;
+    }
+    .testimonial>section>section>img{
+        width: 100%;
+    }
     #sub{
         width: 93%;
     }
@@ -55,6 +70,22 @@
         display: flex;
         text-align: center;
         justify-content: center;
+    }
+    .contactUs>section>img{
+        width: 78vw;
+        height: 600px;
+    }
+    .contactUs>section:last-child{
+        width: 100%;
+    }
+    .contactUs>section>form,.contactUs>section>form>table{
+        width: 100%;
+    }
+    .testimonial{
+        padding: 50px 100px;
+    }
+    .testimonial>section>section>img{
+        width: 100%;
     }
     #sub{
         width: 95%;

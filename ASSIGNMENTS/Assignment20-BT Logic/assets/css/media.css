@@ -1,0 +1,85 @@
+/* MOBILE VERSION */
+@media(max-width: 992px){
+    [class*="col"]{
+        width: 100%;
+    }
+    .header{
+        text-align: center;
+        background-size: contain;
+        height: 100vh;
+    }
+    .header>div>h1{
+        float: none;
+        text-align: center;
+        font-size: 46px;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .header>div>h2{
+        margin-bottom: 20px;
+    }
+    .header>div>h2>span{
+        color: rgb(161, 106, 4);
+    }
+    .header>div>nav>ul{
+        float: none;
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .header>div>nav>ul>li{
+        display: block;
+    }
+    .header>div>nav>ul>li>a,.header>div>nav>ul>li>select{
+        color: black;
+        font-size: 26px;
+    }
+    .header>div>nav{
+        width: 100%;
+    }
+    .banner2>div>div>img{
+        width: 100%;
+    }
+    .banner3>div>div>div{
+        width: 100%;
+    }
+    .banner3>div>div>div>img{
+        top: 0%;
+        left: 0%;
+    }
+    .banner4{
+        background-size: cover;
+        text-align: center;
+    }
+    .banner4>div>div>div>form>input{
+        width: 100%;
+    }
+    .banner4>div>div>div>form>input:nth-child(2){
+        margin-top: 10px;
+    }
+    .banner4>div>div>div>form{
+        margin-top: 0px;
+    }
+}
+
+/* TAB VERSION */
+@media(min-width: 993px) and (max-width:1200px){
+    .header>div>h1{
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 46px;
+    }
+    .header>div>h2{
+        margin-bottom: 20px;
+    }
+    .header>div>nav{
+        width: 100%;
+        text-align: center;
+    }
+    .header>div>nav>ul{
+        float: none;
+        background: rgba(255, 255, 255, 0.4);
+    }
+    .header>div>nav>ul>li>a,.header>div>nav>ul>li>select{
+        color: black;
+    }
+}

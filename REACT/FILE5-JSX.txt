@@ -1,0 +1,15 @@
+JSX - JavaScript XML.
+    1. JSX- Syntax extension for JavaScript.
+    2. We can write Markup inside Javascript file.
+    3. We will have a function which will return method.
+        Inside the return 
+            -> We will write our Markup/HTML
+    4. We will use the curly braces to define variables inside the Markup.
+    5. We can use the variables inside the JSX -> Using the {} braces.
+    6. IMPORTANT:
+        -> return statement
+            NEVER return more than 1 Element.
+        -> Always Should RETURN 1 Element. (bind all in one div or section)
+    7. We can use Objects and map their value inside the markup.
+    8. We can call functions and pass parametera to the function inside the markup.
+    

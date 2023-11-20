@@ -1,0 +1,18 @@
+/* MOBILE */
+@media(max-width: 768px){
+    .container{
+        flex-flow: column;
+    }
+    .container h1{font-size: 28px;}
+    .container>.item{
+        width: 100%;
+    }
+    header{
+        background-color: var(--border);
+        border-color: var(--bgcolor);
+    }
+}
+/* TABLET */
+@media(min-width: 769px) and (max-width:1200px){
+
+}

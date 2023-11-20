@@ -1,0 +1,333 @@
+*{
+    margin: 0%;
+    border: 0%;
+    box-sizing: border-box;
+}
+
+/* BOOTSTRAP GRID LIGIC */
+
+/* COLOUMNS */
+.col1 {
+    width: 8.33%;
+}
+
+.col2 {
+    width: 16.66%;
+}
+
+.col3 {
+    width: 25%;
+}
+
+.col4 {
+    width: 33.33%;
+}
+
+.col5 {
+    width: 41.66%;
+}
+
+.col6 {
+    width: 50%;
+}
+
+.col7 {
+    width: 58.33%;
+}
+
+.col8 {
+    width: 66.66%;
+}
+
+.col9 {
+    width: 75%;
+}
+
+.col10 {
+    width: 83.33%;
+}
+
+.col11 {
+    width: 91.66%;
+}
+
+.col12 {
+    width: 100%;
+}
+
+/* cCOLLECTIONS{} */
+[class*="col"]{
+    float: left;
+    padding: 10px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* MARGINS */
+.mx-50 {
+    margin: auto 50px;
+}
+
+.my-50 {
+    margin: 50px auto;
+}
+
+.mx-20 {
+    margin: 20px auto;
+}
+
+.my-20{
+    margin: auto 20px;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+
+/* PADDINGS */
+.px-50 {
+    padding: auto 50px;
+}
+
+.py-50 {
+    padding: 50px auto;
+}
+
+.p-50 {
+    padding: 50px;
+}
+
+.m-50 {
+    margin: 50px;
+}
+
+.px-20 {
+    padding: auto 20px;
+}
+
+.py-20 {
+    padding: 20px auto;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+/* LINE HEIGHT */
+.ln-2 {
+    line-height: 2;
+}
+.ln-1-5{
+    line-height: 1.5;
+}
+
+/* BACKGROUND COLORS */
+.bg-yellow {
+    background: #fba70b;
+}
+
+.bg-orange {
+    background: #F1556A;
+}
+
+.bg-white{
+    background: #fff;
+}
+
+/* TEXT COLOURS */
+.text-yellow {
+    color: #fba70b;
+}
+
+.text-blue {
+    color: #0056B3;
+}
+
+.text-black {
+    color: #191A20;
+}
+
+.text-white {
+    color: #fff;
+}
+
+/* TEXT ALIGNMENT */
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* BUTTON-TEXT */
+.btn{
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
+}
+.btn:hover{
+    background: #F1556A;
+}
+
+/* NAVIGATION CODE */
+.header{
+    background: url(../images/banner-bg.png) right top no-repeat;
+}
+.header>div>h1{
+    float: left;
+}
+.header>div>h2{
+    font-size: 36px;
+}
+.header>div>nav{
+    width: 80%;
+}
+.header>div>nav>ul{
+    list-style-type: none;
+    float: right;
+    background: #fff;
+}
+.header>div>nav>ul>li{
+    padding: 10px;
+    display: inline-block;
+}
+.header>div>nav>ul>li>select{
+    border: none;
+    background: none;
+    color: gray;
+}
+.header>div>nav>ul>li>a{
+    text-decoration: none;
+    color: gray;
+}
+.header>div>nav>ul>li:hover a,.header>div>nav>ul>li:hover select{
+    color: #0056B3;
+}
+.header>div:last-child{
+    padding-left: 50px;
+}
+
+.header>div:last-child>h1{
+    font-size: 60px;
+    font-weight: 900;
+}
+.header>div:last-child>p{
+    font-size: 20px;
+}
+
+/* BANNER 1 CODE */
+.banner1>div>div>div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.banner1>div>div>div>img{
+    position: relative;
+    top: -30px;
+}
+.banner1>div>div>div>h2{
+    font-size: 65px;
+    opacity: 0.1;
+}
+.banner1>div>div>div>p{
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+/* BANNER 2 CODE */
+.banner2>div>div>img{
+    width: 100%;
+}
+.banner2>div>div>div{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 1s ease-in-out;
+}
+.banner2>div>div>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* BANNER 3 CODE */
+.banner3>div>div>div{
+    background: linear-gradient(hsl(9, 77%, 64%),hsl(10, 87%, 64%),hsl(9, 100%, 80%));
+    padding: 20px;
+    width: 80%;
+    float: right;
+    border-radius: 10px;
+    line-height: 2;
+}
+.banner3>div>div>div>img{
+    position: relative;
+    top: -50px;
+    left: -180px;
+}
+.banner3>div>div:last-child div{
+    padding: 50px;
+    border-radius: 10px;
+}
+.banner3>div>h1{
+    font-size: 45px;
+}
+.banner3>div>p{
+    margin-bottom: 50px;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* BANNER 4 CODE */
+.banner4{
+    background: url(../images/footer-bg.png) no-repeat;
+}
+.banner4>div>div>div>form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.banner4>div>div>div>form>input{
+    width: 45%;
+    padding: 15px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+}
+.banner4>div>div>div>form>input:first-child{
+    float: left;
+}
+.banner4>div>div>div>form>input:nth-child(2){
+    float: right;
+}
+.banner4>div>div>div>form>textarea{
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+}
+.banner4>div>div>div>h1{
+    font-size: 45px;
+}
+.banner4>div>div>div>p{
+    font-size: 18px;
+}

@@ -18,3 +18,21 @@ REACT LIFECYCLE METHODS
         2) render() :
             - The render() method is responsoble for generating the components virtual DOM representation based on it's current props and state.
             - It is called every time the component needs to be re-rendered, either because it's props or states have changed, or because a parent component has been re-rendered.
+
+        3) componentWillMount() :
+            // Precently they are removed. It exist
+
+PRACTICE CODE METHODS
+    -> App.jsx
+        1) render(){}
+        2) Mount(){}
+        3) Unmuont(){}
+
+    -> Counter.jsx
+        1) componentWillMount(){}
+        2) componentDidMount(){}
+        3) updateCounter(){} // User defined method
+        4) componentWillReceiveProps(nP,nC){}
+        5) shouldComponentUpdate(nP,nS){}
+        6) componentWillUpdate(nP,nS){}
+        7) componentDidUpdate(oP,oS){}

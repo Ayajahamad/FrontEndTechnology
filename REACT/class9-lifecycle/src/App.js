@@ -12,14 +12,20 @@ class App extends Component {
     }
   }
 
-  // User defined methods
+  // User defined Mount methods
   Mount(){
     ReactDOM.render(
       <React.StrictMode>
-        <Counter counterProps={this.state.name} />
+        <Counter counterProps={0} />
       </React.StrictMode>,
       document.getElementById("renderHere")
     )
+  }
+
+  // User defined UnMount methods
+  Unmount(){
+    console.log("Component UnMounted")
+    ReactDOM.unmountComponentAtNode(document.getElementById("renderHere"));
   }
    
 
@@ -37,7 +43,7 @@ class App extends Component {
                 <div className="col">
                   <p>{this.state.name}</p>
                   <button className='btn btn-outline-success' onClick={this.Mount.bind(this)}>Mount</button>
-                  <button className='btn btn-outline-danger float-end'>UnMount</button>
+                  <button className='btn btn-outline-danger float-end' onClick={()=>this.Unmount()}>UnMount</button>
                   <hr />
                 </div>
           </div>

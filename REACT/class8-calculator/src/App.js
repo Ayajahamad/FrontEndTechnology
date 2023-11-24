@@ -26,7 +26,7 @@ function App() {
 
   // FOR DELETE BUTTON
   const del = () =>{
-    setResult(result.slice(0,2))
+    setResult(result.slice(0,-1))
   }
 
   return (

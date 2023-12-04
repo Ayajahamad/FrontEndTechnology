@@ -12,9 +12,9 @@ const registerUser = async (user) => {
     const extMobile = users.find((item)=> item.mobile === user.mobile);
 
     if(extEmail){
-        toast.warning(`${user.email} is already Exists`)
+        toast.warning(`${user.email} is already Exists`);
     }else if(extMobile){
-        toast.warning(`${user.mobile} is already Exists`)
+        toast.warning(`${user.mobile} is already Exists`);
     }else{
         users.push(user);
         console.log(users);
@@ -30,14 +30,30 @@ const saveUsers=(data)=>{
     localStorage.setItem('users', JSON.stringify(data));
 }
 
+// Login Handler
 const loginUser= async (user)=>{
     const extUser = users.find((item)=> item.email === user.email);
 
     if (!extUser) {
         toast.warning(`${user.email} doesn't exists.`)
     } else {
-        toast.success(`${user.email} exists.`)
+        if (extUser.password === user.password) {
+            localStorage.setItem('loginStatus',true);
+            toast.success("User Login Successfull");
+            window.location.href="/";
+        }else{
+            toast.warning("Password are not matched");
+        }
     }
 }
 
-export {registerUser,loginUser};
+// Logout Handler
+const logoutUser = async () => {
+    if(localStorage.getItem('loginStatus')==="true"){
+        localStorage.removeItem("loginStatus");
+        toast.success("Successfully logout");
+        window.location.href = "/";
+    }
+}
+
+export {registerUser,loginUser,logoutUser};

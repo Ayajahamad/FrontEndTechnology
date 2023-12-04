@@ -1,5 +1,5 @@
-import React, {useRef} from 'react'
-import {loginUser} from '../data/user'
+import React, {useRef} from 'react';
+import {loginUser} from '../data/user';
 
 const Login = () => {
 

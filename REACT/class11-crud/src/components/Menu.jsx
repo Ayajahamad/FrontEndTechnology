@@ -32,7 +32,7 @@ const Menu = () => {
                                     <NavLink to={"/"} className="nav-link">Menu</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to={"/"} className="nav-link">Create</NavLink>
+                                    <NavLink to={"/create"} className="nav-link">Create</NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink to={"/"} className="nav-link btn btn-danger" onClick={logoutHandler}>Logout</NavLink>

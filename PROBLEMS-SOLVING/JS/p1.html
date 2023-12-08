@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND THE MISSING NUMBER</title>
+</head>
+<body>
+    <h1>Given an array of integers from 1 to n with ONE Number missing, Find the missing number</h1>
+
+    <label for="arr">Enter Your Array : </label>
+    <input type="text" id="arr" name="arr">
+    <button onclick="findMissingnumber()">Click To see the Missing Number</button>
+    <p id="result"></p>
+    <script>
+        // One Way to Solve
+            function findMissingnumber(){
+                let inp = document.getElementById('arr').value;
+                let result = document.getElementById('result');
+
+                let arr = inp.split(",").map(Number);
+                console.log(arr);
+
+                for (let i = 1; i <= arr.length; i++) {
+
+                    if(arr.indexOf(i) == -1){
+                        result.innerText = i;
+                    }
+                }
+            }
+
+        // These is the Another way
+            let arr1 = [1,2,3,5]
+            arr1.sort();
+
+            for (let i=0; i<arr1.length;i++){
+                if(arr1[i] !== i+1){
+                    console.log(i+1)
+                }
+            }
+
+        // Method 3 for these solution
+            let arr2 = [1,2,3,4,5,6];
+            let n = arr2.length+1;
+
+            let actual = n*(n+1)/2;
+            let sum = arr2.reduce((a,b)=>a+b,0);
+            
+            let missing = actual-sum;
+            console.log(missing)
+    </script>
+</body>
+</html>

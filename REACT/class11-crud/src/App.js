@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import Home from './components/Home';
 import ProtectedRouter from './authGuard/ProtectedRouter';
 import Create from './components/Create';
+import Update from './components/Update';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route element={<ProtectedRouter />}>
           <Route path={'/'} element={<Home />}/>
           <Route path={'/create'} element={<Create />}/>
+          <Route path={'/update/:id'} element={<Update />}/>
         </Route>
         
         <Route path={'/login'} element={<Login />}/>

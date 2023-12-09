@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return the Unique array</title>
+</head>
+<body>
+    <script>
+        // 1 type
+        let arr = [1,2,3,2,1,4,5,6,7,5,4,3,2,2,9]
+        let inc = [];
+        for(let i =0;i<arr.length;i++){
+            if(!inc.includes(arr[i])){
+                inc.push(arr[i]);
+            }
+        }
+        console.log(inc)
+
+        // 2nd type
+        let arr1 = [1,2,3,2,1,4,5,6,7,5,4,3,2,2,9];
+        let uniQuearr = new Set(arr1); // Set() method is automatically seperate an unique array
+        console.log(uniQuearr) // Here it wiil print in Object
+        console.log([...uniQuearr]); // Using spred operator change it to array
+
+        // 3rd Type
+        let arr2 = [1,2,3,4,5,6,4,3,5];
+        let unique = arr2.filter((element,index,self)=>{
+            // console.log(element);
+            // console.log(index);
+            // console.log(self);
+           return self.indexOf(element) === index;  
+        })
+         console.log(unique)
+    </script>
+</body>
+</html>

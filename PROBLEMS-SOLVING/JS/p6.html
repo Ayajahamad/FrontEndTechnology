@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var,let,const</title>
+</head>
+<body>
+    <script>
+        //  var - function scoped
+        function varLeyword(){
+                for (var i = 0; i < 5; i++) {
+                    console.log(i)  
+                }
+                console.log(i); // here also print 5 because var is function scoped
+            }
+            varLeyword();
+
+        // Addd itself to window
+            var ItselfV = 10;
+            
+
+        // let - braces scoped
+        
+            function letLeyword(){
+                for (let j = 0; j < 5; j++) {
+                    console.log(j)  
+                }
+                // console.log(j); // througs an error
+            }
+                letLeyword();
+
+        // doesn't add itself to window
+            let ItselfL = 15;
+    </script>
+</body>
+</html>

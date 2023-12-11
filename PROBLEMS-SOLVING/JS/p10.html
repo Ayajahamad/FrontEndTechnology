@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop </title>
+</head>
+<body>
+    <script>
+        let obj = {
+            A : 'a',
+            B : 'b',
+            C : 'c',
+            D : 'd',
+            E : 'e'
+        }
+        console.log(obj.A)
+
+        // For in loop Used for Objects
+
+        for (const key in obj) {
+            console.log(key , ':' , obj[key])
+        }
+    </script>
+</body>
+</html>

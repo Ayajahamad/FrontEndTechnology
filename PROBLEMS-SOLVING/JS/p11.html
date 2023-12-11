@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor functions</title>
+</head>
+<body>
+    <script>
+        //Constructor Functions - Normal function which have a 'new' and 'this' keywoed
+
+        function constructorFunc(){
+            this.fName = 'Ayaj', // 'this' keyword is important here
+            this.lName = 'Ahamad',
+            this.method = function myFunc(){return this.fName + this.lName}; // these is called 'method'
+        }
+
+        let contFunc = new constructorFunc(); //the 'new' keyword Converts to Object
+        console.log("Full Name =" ,contFunc.method());
+
+        // Whaen ever we use a 'new' keyword it will create a blank Object.
+    </script>
+</body>
+</html>

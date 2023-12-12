@@ -1,4 +1,6 @@
-import React, {useState} from "react";
+import { omit } from "lodash";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const initState = {
     name : "",
@@ -8,7 +10,7 @@ const initState = {
     address  : ""
 };
 
-// useForm = > form validate custom hook
+// useForm => form validate custom hook
 function UserForm(){
     const [contact, setContact] = useState(initState);
     const [errors, setError] = useState({});
@@ -18,14 +20,65 @@ function UserForm(){
         setError({...errors , [prop]:msg});
     }
 
+    // Validation function
     const validate = (event,name,value) => {
         switch (name) {
             case "name":
                 if (value.length === 0) {
-                    errPrint(name,"Email field must be filled");
+                    errPrint(name,"Name field must be filled");
+                } else if(value.length < 3){
+                    errPrint(name, "Name at least 3 letters")
+                }else if(!new RegExp(/^[a-zA-Z\s]+$/).test(value)){
+                    errPrint(name,"Invalid Name")
+                }else{
+                    let newOb = omit(errors,name);
+                    setError(newOb)
                 }
                 break;
-        
+            
+            case "email": 
+                if (value.length === 0) {
+                    errPrint(name,"Email field must be filled");
+                } else if(!new RegExp(/^[a-zA-Z0-9\S]+@[a-zA-Z\S]+$/).test(value)){
+                    errPrint(name,"Invalid Email Format.")
+                }else{
+                    let newOb = omit(errors,name);
+                    setError(newOb)
+                }
+                break;
+
+            case "image":
+                if (value.length === 0) {
+                    errPrint(name,"Image field must be filled");
+                } else if(!new RegExp(/^\S+$/).test(value)){
+                    errPrint(name,"Invalid Image URL.")
+                }else{
+                    let newOb = omit(errors,name);
+                    setError(newOb)
+                }
+                break;
+
+            case "mobile":
+                if (value.length === 0) {
+                    errPrint(name,"Mobile field must be filled");
+                } else if(!new RegExp(/^[6-9]\d{9}$/).test(value)){
+                    errPrint(name,"Invalid Mobile Number.")
+                }else{
+                    let newOb = omit(errors, name);
+                    setError(newOb)
+                }
+                break;
+            case "address":
+                if (value.length === 0) {
+                    errPrint(name,"Address field must be filled");
+                } else if(!new RegExp(/^([a-zA-Z0-9/\\''(),-/#\s]{2,255})$/).test(value)){
+                    errPrint(name,"Invalid Address.")
+                }else{
+                    let newOb = omit(errors,"name");
+                    setError(newOb)
+                }
+                break;
+
             default:
                 break;
         }
@@ -41,7 +94,12 @@ function UserForm(){
     // For Submit The value
     const submitHandler = (e) => {
         e.preventDefault(); // avoide page refresh
-        console.log("New Contact = ",contact);
+        // console.log("New Contact = ",contact);
+        if(Object.keys(errors).length === 0 && Object.keys(contact).length !== 0){
+            console.log("New Contact = ",contact);
+        }else{
+            toast("Some Errors are in from or Fields are empty")
+        }
     }
 
     return {
@@ -49,7 +107,7 @@ function UserForm(){
         errors,
         readValue,
         submitHandler,
-        setContact
+        setContact,
     }
 }
 

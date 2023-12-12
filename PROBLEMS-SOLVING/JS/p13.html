@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtoTypes</title>
+</head>
+<body>
+    <script>
+       // Every Object Have a Prototype
+       // Prototypal Inheritance
+
+       let obj = {} // Empty Object - it will Have a [[Prototype]]
+       console.log(obj);
+
+       let parent = {
+        color : 'white',
+        hair : 'curly',
+        profession : 'farmer',
+        family : 'some'
+       }
+
+       let child = {
+        fassion : 'Engeneer',
+        age : 23,
+        location : 'mumbai'
+       }
+
+       child.__proto__ = parent; // Inherited using 'Proto'
+
+       console.log(child.color); // Accessing parent property using child obj
+       console.log(parent.color);
+    </script>
+</body>
+</html>

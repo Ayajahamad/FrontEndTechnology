@@ -1,5 +1,44 @@
 {
-    "contacts": [
-        {"name" : "ayaj"}
-    ]
+  "contacts": [
+    {
+      "id": 670,
+      "name": "Ahamad",
+      "email": "ayaj@gmail.com",
+      "image": "https://www.freecodecamp.org/news/content/images/2022/11/What-is.png",
+      "mobile": "8762968348",
+      "address": "Bengalore"
+    },
+    {
+      "id": 670,
+      "name": "Ayaj Ahama",
+      "email": "ayaj@gmail.com",
+      "image": "https://www.freecodecamp.org/news/content/images/2022/11/What-is.png",
+      "mobile": "8762968348",
+      "address": "Bengalore"
+    },
+    {
+      "id": 580,
+      "name": "Ayaj Ahama",
+      "email": "ayaj@gmail.com",
+      "image": "https://www.freecodecamp.org/news/content/images/2022/11/What-is.png",
+      "mobile": "8762968348",
+      "address": "Bengalore"
+    },
+    {
+      "id": 506,
+      "name": "html",
+      "email": "htmal@gmail.com",
+      "image": "https://content.instructables.com/ORIG/FCB/B741/GXO0U8MU/FCBB741GXO0U8MU.jpg?frame=1",
+      "mobile": "8767876787",
+      "address": "sirsi"
+    },
+    {
+      "id": 984,
+      "name": "html",
+      "email": "htmal@gmail.com",
+      "image": "https://content.instructables.com/ORIG/FCB/B741/GXO0U8MU/FCBB741GXO0U8MU.jpg?frame=1",
+      "mobile": "8767876787",
+      "address": "Bengalore"
+    }
+  ]
 }

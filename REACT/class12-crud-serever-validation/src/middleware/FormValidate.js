@@ -1,8 +1,17 @@
 import { omit } from "lodash";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+const baseUrl = "http://localhost:4000";
+
+const randId = () => {
+    return Math.floor(Math.random() * 1000)
+};
 
 const initState = {
+    id:randId(),
     name : "",
     email : "",
     image : "",
@@ -14,6 +23,9 @@ const initState = {
 function UserForm(){
     const [contact, setContact] = useState(initState);
     const [errors, setError] = useState({});
+
+    // useNavigate Refrence, Internal Navigate
+    const navigate = useNavigate();
 
     // Error Printing
     const errPrint = (prop,msg) => {
@@ -74,7 +86,7 @@ function UserForm(){
                 } else if(!new RegExp(/^([a-zA-Z0-9/\\''(),-/#\s]{2,255})$/).test(value)){
                     errPrint(name,"Invalid Address.")
                 }else{
-                    let newOb = omit(errors,"name");
+                    let newOb = omit(errors,name);
                     setError(newOb)
                 }
                 break;
@@ -92,11 +104,21 @@ function UserForm(){
     };
 
     // For Submit The value
-    const submitHandler = (e) => {
+    const submitHandler =async (e) => {
         e.preventDefault(); // avoide page refresh
         // console.log("New Contact = ",contact);
         if(Object.keys(errors).length === 0 && Object.keys(contact).length !== 0){
             console.log("New Contact = ",contact);
+
+            // Post Handler
+           await axios.post(`${baseUrl}/contacts`, contact)
+            .then((res)=>{
+                setContact(initState);
+                toast.success("User Created");
+
+                navigate("/")
+            })
+            .catch((err)=>toast.error(err.message));
         }else{
             toast("Some Errors are in from or Fields are empty")
         }

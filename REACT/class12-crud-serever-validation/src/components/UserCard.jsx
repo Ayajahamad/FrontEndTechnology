@@ -44,7 +44,7 @@ const UserCard = (props) => {
                 </ul>
             </div>
             <div className="card-footer">
-                <NavLink className="btn btn-sm btn-danger">
+                <NavLink to={`/Update/${id}`} className="btn btn-sm btn-danger">
                     <i className="bi bi-pen"></i>
                 </NavLink>
                 <NavLink className="btn btn-sm btn-danger float-end">

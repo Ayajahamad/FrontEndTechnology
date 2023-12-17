@@ -1,0 +1,8 @@
+- Hooks are the new features introduced in the react 16.8 Version.
+- It Allows you to use state and another react features without writing a class.
+- Hooks are the Functions which "HOOK INTO" React state and lifecycle features from the function component.
+
+RULES OF HOOKS : 
+    1) Only call hooks at the top level
+        - Do not call inside loops, conditions or nested Functions.
+    2) Only call hooks from react functions.

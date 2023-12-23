@@ -2,29 +2,29 @@ import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
-const UserAPI = () => {
+const PostAPI = () => {
 
     const url = 'https://jsonplaceholder.typicode.com';
 
-        const [user,setUser] = useState([]);
+        const [post,setPost] = useState([]);
 
         /* useCallback will return a memoized version of the callback that only changes if one of the inputs has changed */
 
-        const getUsers = useCallback(() => {
-            const readUsers = async () =>{
-                axios.get(`${url}/users`).then((out)=>{
-                    console.log(out)
-                    setUser(out.data)
+        const getPosts = useCallback(() => {
+            const readPosts = async () =>{
+                axios.get(`${url}/posts`).then((out)=>{
+                    // console.log(out)
+                    setPost(out.data)
                 }).catch(error => toast.error(error.message));
             }
-            readUsers();
+            readPosts();
         },[]);
 
-        useEffect(()=>{getUsers()},[]);
+        useEffect(()=>{getPosts()},[]);
 
   return {
-      users : [user,setUser]
+      posts : [post,setPost]
     }
 }
 
-export default UserAPI
+export default PostAPI;

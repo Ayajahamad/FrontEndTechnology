@@ -6,12 +6,13 @@ const Users = () => {
   const context = useContext(DataContext);
   const[users] = context.userApi.users;
 
-  console.log("This is Users Component = ",users)
+  // console.log("This is Users Component = ",users)
   return (
-    <div className="container">
+    <div className="bg-primary">
+      <div className="container">
       <div className="row">
         <div className="col">
-          <h1 className="text-center text-secondary">Users</h1>
+          <h1 className="text-center text-white">Users</h1>
         </div>
       </div>
       <div className="row">
@@ -21,6 +22,7 @@ const Users = () => {
           )
         })}
       </div>
+    </div>
     </div>
   )
 }

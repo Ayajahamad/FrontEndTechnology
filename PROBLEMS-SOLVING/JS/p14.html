@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+<body>
+    <button id="click">Click here to change the color</button>
+    <script>
+        // 'this' keyword in global
+        console.log(this);
+
+        // 'this' keyword in function
+        function thisUnderFunction(){
+            console.log(this);
+        }
+        thisUnderFunction();
+        
+        // 'this' keyword in Object
+        let obj = {
+            thisUnderObject : function(){
+                console.log(this);
+            }
+        }
+        obj.thisUnderObject();
+
+        // 'this' keyword in Event- is always refers to the parent
+        var button = document.querySelector('#click');
+        button.addEventListener('click', function(){
+            this.style.color = 'red';
+        })
+
+    </script>
+</body>
+</html>

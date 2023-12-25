@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call method</title>
+</head>
+<body>
+    <script>
+        // we want to target 'this' forcefully to another object use call() mehod
+
+        function targetThis(){
+            console.log(this.name); // this points to obj
+        }
+
+        let obj = {
+            name : 'xyz'
+        }
+
+        targetThis.call(obj);
+
+        // call metod with parameters
+        function callWithParameters(a,b){
+            console.log("call with parameters =",a+b)
+        }
+        callWithParameters.call(obj,2,5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind method</title>
+</head>
+<body>
+    <script>
+        function bindMethod(a,b){
+            console.log(this.name) // points to object
+            console.log(a+b)
+        }
+
+        let obj = {
+            name : 'xyz'
+        }
+
+        let bindedMethod = bindMethod.bind(obj,2,3); // need to access like these
+        bindedMethod();
+    </script>
+</body>
+</html>

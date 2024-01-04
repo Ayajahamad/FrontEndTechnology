@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying</title>
+</head>
+<body>
+    <script>
+        // Currying is a functional programming concept that involves transforming a function that takes multiple arguments into a series of functions that each take a single argument. The idea is named after Haskell Curry, a mathematician and logician.
+
+        function curryingFunc(x){
+            return function(y){
+                return x+y;
+            }
+        }
+        console.log(curryingFunc(2)(3));
+        
+    </script>
+</body>
+</html>

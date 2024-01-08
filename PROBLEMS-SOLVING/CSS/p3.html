@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 3;
+            grid-template-rows: 4;
+            border: 2px solid black;
+            height: 90vh;
+            margin: 10px;
+            text-align: center;
+            gap: 10px;
+            padding: 10px;
+            color: aliceblue;
+            font-size: 20px;
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: purple;
+        }
+        .item2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: rgb(36, 86, 36);
+        }
+        .item3{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: rgb(0, 170, 255);
+        }
+        .item4{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: rgb(0, 170, 255);
+        }
+        .item5{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: rgb(0, 170, 255);
+        }
+        .item6{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: purple;
+        }
+        /* @media(max-width:760px){
+            .item1,.item2,.item3,.item4,.item5,.item6{
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">Header</div>
+        <div class="item2">Sidebar</div>
+        <div class="item3">Content 1</div>
+        <div class="item4">Content 2</div>
+        <div class="item5">Content 3</div>
+        <div class="item6">Footer</div>
+    </div>
+</body>
+</html>

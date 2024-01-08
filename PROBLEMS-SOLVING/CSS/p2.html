@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation DropDown</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .container>h1{
+            text-decoration: underline;
+            margin: 20px;
+        }
+        ul{
+            position: absolute;
+            list-style-type: none;
+        }
+        ul>li{
+            display: inline-block;
+            padding: 20px;
+            font-size: 18px;
+        }
+        ul>li:hover a{
+            color: blue;
+        }
+        ul>li a{
+            color: #000;
+        }
+        ul>li a{
+            text-decoration: none;
+        }
+        ul>li>ul{
+            display: none;
+            list-style-type: none;
+        }
+        ul>li>ul>li{
+            display: block;
+            padding: 5px;
+            position: relative;
+            font-size: 16px;
+        }
+        ul>li:hover ul>li>a{
+            color: red;
+        }
+        ul>li:hover ul{
+            display: block;
+        }
+        ul>li>ul>li:hover{
+            background-color: gray;
+        }
+        ul>li>ul>li:hover a{
+            color: #fff;
+        }
+
+        @media(max-width:670px){
+            ul>li{
+                display: block;
+            }
+            ul>li>ul>li{
+            top: -20px;
+            left: 70px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <h1>DropDown Navigation Bar</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Coding</a></li>
+                        <li><a href="#">Interview</a></li>
+                        <li><a href="#">Job</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Clients</a>
+                    <ul>
+                        <li><a href="#">Wipro</a></li>
+                        <li><a href="#">Amazon</a></li>
+                        <li><a href="#">Microsoft</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Arrays</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <script>
+        // -- Usecases
+            // 1. Write code to get array of names from given array of users
+            // 2. Get back only active users
+            // 3. Sort users by age descending
+            // 4. Display the result in Browser
+
+
+        const users = [
+            {
+                id: 1,
+                name: "Ajay",
+                isActive: true,
+                age: 19
+            },
+            {
+                id: 2,
+                name: "Tarun",
+                isActive: true,
+                age: 20
+            },
+            {
+                id: 3,
+                name: "Vijay",
+                isActive: false,
+                age: 14
+            },
+            {
+                id: 4,
+                name: "Sukesh",
+                isActive: true,
+                age: 58
+            },
+            {
+                id: 5,
+                name: "Arjun",
+                isActive: true,
+                age: 28
+            },
+            {
+                id: 6,
+                name: "varun",
+                isActive: false,
+                age: 8
+            },
+            {
+                id: 7,
+                name: "Ram",
+                isActive: true,
+                age: 78
+            },
+            {
+                id: 8,
+                name: "Priya",
+                isActive: true,
+                age: 38
+            },
+            {
+                id: 9,
+                name: "Suja",
+                isActive: false,
+                age: 18
+            },
+            {
+                id: 10,
+                name: "Arun",
+                isActive: true,
+                age: 18
+            }
+        ]
+
+        
+
+        // Solution 1 - leve 1
+        // Sorting With Descending order
+        users.sort((user1,user2) => user1.age < user2.age ? 1 : -1)
+        const names = []
+        for (let i = 0; i < users.length; i++) {
+            if(users[i].isActive){
+
+                // names.push(users[i].name)
+
+                let div = document.getElementById("result")
+                let ul = document.createElement("ul")
+                let li = document.createElement("li")
+
+                div.appendChild(ul)
+                ul.appendChild(li)
+                li.innerHTML = `${users[i].name}`;
+            }
+        }
+        // console.log(names)
+
+        // Solution 2 - level 2
+            // forEach cannot create an new Array
+        const names1 = []
+        users.sort((user1,user2) => user1.age < user2.age ? 1 : -1).forEach((item)=>{
+            if(item.isActive){
+                names1.push(item.name)
+
+                let div = document.getElementById("result")
+                let ul = document.createElement("ul")
+                let li = document.createElement("li")
+
+                ul.appendChild(li)
+                li.innerHTML = `${item.name}`;
+                div.appendChild(ul)
+            }
+        })
+        console.log(names1)
+
+        // Solution 3 - level 3
+        const User = users.filter((user)=>user.isActive)
+        .sort((user1,user2) => user1.age < user2.age ? 1 : -1)
+        .map((user)=>user.name)
+        console.log(User)
+
+        // .map((user)=>{
+        //        let div = document.getElementById("result")
+        //         let ul = document.createElement("ul")
+        //         let li = document.createElement("li")
+
+        //         div.appendChild(ul)
+        //         ul.appendChild(li)
+        //         li.innerHTML = `${user.name}`;})
+
+
+        // The map() function returns anew array , whereas thw forEach() method does not return any new array
+        // The forEach() method is similar to the for loop, but it does not have return values.
+        // The map() method is similar to the forEach , but it returns the new array.
+    </script>
+</body>
+</html>

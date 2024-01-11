@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype Question</title>
+</head>
+<body>
+    <script>
+
+        /*
+        // UseCase
+            1. Create a prototype called Calculator with a property result initialized to 0.
+            2. Add methods to the Calculator prototype for basic operations: add, subtract, multiply, and divide. These methods should take a number as an argument, perform the corresponding operation, and update the result property.
+            3. Create an instance of the Calculator, perform a sequence of operations, and display the final result.
+        */
+
+        /*
+
+        // One method to solve
+
+        // Step 1: Calculator Prototype
+        function Calculator() {
+            this.result = 0;
+        }
+
+        // Step 2: Methods for Calculator Prototype
+        Calculator.prototype.add = function(number) {
+            this.result += number;
+        };
+
+        Calculator.prototype.subtract = function(number) {
+            this.result -= number;
+        };
+
+        Calculator.prototype.multiply = function(number) {
+            this.result *= number;
+        };
+
+        Calculator.prototype.divide = function(number) {
+            // Check for division by zero
+            if (number !== 0) {
+                this.result /= number;
+            } else {
+                console.log("Cannot divide by zero.");
+            }
+        };
+
+        // Step 3: Create an instance, perform operations, and display result
+        var myCalculator = new Calculator();
+
+        myCalculator.add(8);
+        myCalculator.subtract(3);
+        myCalculator.multiply(2);
+        myCalculator.divide(4);
+
+        console.log("Final Result:", myCalculator.result); // Outputs: Final Result: 1
+
+        */
+
+        /*
+
+        //Another Method to Solve
+
+        function Calculator(number1,number2){
+            this.result = 0;
+            this.number1 = number1
+            this.number2 = number2
+        }
+
+        Calculator.prototype.add = function(){
+            this.result = this.number1+this.number2;
+            console.log(this.result)
+        }
+        Calculator.prototype.sub = function(){
+            this.result = this.number1-this.number2;
+            console.log(this.result)
+
+        }
+        Calculator.prototype.mul = function(){
+            this.result = this.number1*this.number2;
+            console.log(this.result)
+
+        }
+
+        result = new Calculator(2,3)
+        console.log(result.result)
+
+        result.add()
+        result.sub()
+        result.mul()
+
+        */
+        
+    </script>
+</body>
+</html>

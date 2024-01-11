@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working With Objects</title>
+</head>
+<body>
+    <script>
+       const companies = [
+            { 
+                name: "Tech Innovators", 
+                type: "Product Based", 
+                start: 2005, 
+                end: 2023 
+            },
+            { name: "Data Solutions Inc.", type: "Service Based", start: 1999, end: 2015 },
+            { name: "Future Dynamics", type: "Product Based", start: 2010, end: 2022 },
+            { name: "Global Services Ltd.", type: "Service Based", start: 2002, end: 2018 },
+            { name: "EcoTech Solutions", type: "Product Based", start: 2015, end: 2025 },
+            { name: "Innovate Systems", type: "Service Based", start: 2008, end: 2019 },
+            { name: "Sky Networks", type: "Product Based", start: 1995, end: 2007 },
+            { name: "Precision Analytics", type: "Service Based", start: 2012, end: 2020 }
+        ];
+
+
+        const ages = [12,34,21,35,67,43,45,68,54,34,56,87,98,78,76,80]
+
+
+        // Higher Order functions
+            // 1. forEach()
+            // 2. map()
+            // 3. filter()
+            // 4. sort()
+            // 5. reduce()
+
+        // UseCases
+        /*
+            1. Saperate the Product Based companies
+            2. Sort and write in descending order using Companies start year
+            3. sort the ages.
+            4. Sum all items in age
+            5. Print the age which is above 
+        */
+
+        /*
+        companies.forEach(company=>{
+            if(company.type === "Product Based"){
+                console.log(company)
+            }
+        })
+        */
+
+        /*
+        let companyP = companies.map(company=>company.type)
+        console.log(companyP)
+        */
+
+        /*
+        let fAge = ages.filter((age)=>age>25)
+        console.log(fAge)
+        */
+
+        /*
+        let totalAge = ages.reduce((total,age)=>total+age,0)
+        console.log(totalAge)
+        */
+
+        /*
+        let sAge = ages.sort((age1,age2)=>age1>age2 ? 1:-1)
+        console.log(sAge)
+        */
+
+        /*
+        let sAge = companies.sort((a,b)=>a.start>b.start?1:-1)
+        console.log(sAge)
+        */
+
+        /*
+        1. How would you filter the companies array to get only the "Product Based" companies?
+        2. Can you write code to map the 'name' property of each company to an array?
+        3. Sort the companies based on their start year in ascending order.
+        4. Write a function to find the duration each company has been active.
+        5. Write code to add a new company to the 'companies' array.
+        6. How would you check if any company in the 'companies' array has been active for more than 20 years?
+        7. How would you handle the case where the 'end' property of a company is not defined?
+        */
+
+        /*
+        1. Use the forEach function to log the names of all companies that are "Product Based" to the console.
+        2. Create a new array using the map function that contains objects with only the 'name' and 'type' properties of each company.
+        3. Use the filter function to create a new array containing only the companies that were active in the year 2020.
+        4. Sort the companies based on their start year in ascending order using the sort function.
+        5. Use the reduce function to find the total duration (in years) all "Product Based" companies have been active.
+        6. Create a new array using a combination of map and filter functions to include only the "Service Based" companies that started after the year 2000.
+        */
+
+        /*
+        The some method in JavaScript is an array method that is used to test whether at least one element in the array passes the provided callback function. It returns a Boolean value indicating whether the callback function returns true for at least one element in the array. If any element satisfies the condition, some returns true; otherwise, it returns false.
+
+        array.some(callback(element, index, array), thisArg);
+
+        */
+        // const numbers = [1, 2, 3, 4, 5];
+        // const isEven = numbers.some(num => num % 2 === 0);
+        // console.log(isEven); // true, because at least one number (2) is even
+
+    </script>
+</body>
+</html>

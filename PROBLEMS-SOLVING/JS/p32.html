@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with ProtoTypes</title>
+</head>
+<body>
+    <script>
+        // Prototypes in JS
+           /* 
+            1. prototype 
+            2. __proto__  (older - Depricated)
+            3. Object.getPrototypeOf(object)
+            4. Object.setPrototypeOf(object, prototype)
+           */
+
+        // prototype - using with constructor function
+        /*
+        function namePerson(name){
+            this.name = name;
+        }
+        namePerson.prototype.namePerson1 = function(){
+            console.log(`My name is - ${this.name}`)
+        }
+        newObj = new namePerson("Alice")
+        newObj.namePerson1()
+
+        newObj1 = new namePerson("Bob")
+        newObj1.namePerson1()
+        */
+
+
+        // __proto__ - using Object
+        /*
+        const obj1 = {
+            name:"xyz"
+        }
+
+        const obje2 = {
+            age:23,
+            __proto__:obj1
+        }
+        console.log(obje2.name)
+        */
+       /*
+        const obj1 = {
+            name:"xyz"
+        }
+
+        const obj2 = {
+            age:23,
+        }
+        obj2.__proto__=obj1;
+        console.log(obj2.name)
+        */
+
+        // Object.setPrototypeOf()
+        /*
+        const obj1 = {
+            name:"xyz"
+        }
+
+        const obj2 = {
+            age:23,
+        }
+
+        let setObj = Object.setPrototypeOf(obj2,obj1);
+        console.log(setObj)
+
+        const obje3 = {
+            getName:function(){
+                console.log(`My name is - ${this.name}`)
+            }
+        }
+        setObje1 = Object.setPrototypeOf(obje3,setObj);
+        setObje1.getName();
+        */
+
+        // Object.getPrototypeOf()
+        /*
+        function Person(name) {
+            this.name = name;
+        }
+
+        var person = new Person('John');
+
+        console.log(person.name)
+
+        var prototypeOfPerson = Object.getPrototypeOf(person);
+
+        console.log(prototypeOfPerson === Person.prototype); // true
+
+        var nameFromPrototype = prototypeOfPerson.name; /// undefined
+        console.log(nameFromPrototype);
+        */
+
+
+
+
+
+        
+
+          
+    </script>
+</body>
+</html>

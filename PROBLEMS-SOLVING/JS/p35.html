@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // The 'Map' object is a built-in data structure in JavaScript that allows you to store key-value pairs, where both keys and values can be of any data type.
+            // The primary purpose of a Map is to store key-value pairs. This is useful for representing relationships between data.
+        
+            let myMap = new Map();
+            myMap.set('name', 'John'); // .set() - will be used for set the key:value
+            myMap.set('age', 25);
+            myMap.set('year',2024)
+
+            console.log(myMap)
+
+
+            // iterating through forEach loop
+            myMap.forEach((value, key) => {
+                console.log(key, value);
+            });
+    </script>
+</body>
+</html>

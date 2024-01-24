@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working With Objects and array</title>
+</head>
+<body>
+    <script>
+
+        const users = [
+            {
+                id: 1,
+                name: "Ajay",
+                isActive: true,
+                age: 20
+            },
+            {
+                id: 2,
+                name: "Suresh",
+                isActive: true,
+                age: 22
+            },
+            {
+                id: 1,
+                name: "Arjun",
+                isActive: false,
+                age: 24
+            },
+            {
+                id: 1,
+                name: "Yadhav",
+                isActive: true,
+                age: 19
+            },
+            {
+                id: 1,
+                name: "Priya",
+                isActive: true,
+                age: 20
+            },
+        ]
+
+
+        // 1) Check If user with such anme exists
+        // 2) Adding element to the array
+        // 3) Remove Dublicate Element in the array
+        // 4) Concanating the Array
+
+        // includes(), some(), reduce(), find(), findIndex(), concat()
+
+
+        //-------- 1) Check If user with such name exists ------
+
+        // Level 0
+        /*
+        nameCheck = (name,users) =>{
+            for (let i = 0; i < users.length; i++) {
+                if(users[i].name===name){
+                    return true
+                }
+            }
+        }
+        console.log(nameCheck("Suresh",users))
+        */
+
+        // Level 1
+        /*
+        nameCheck = (name,users) =>{
+            return users.find((user)=>user.name === name)
+        }
+        console.log(nameCheck("Priya",users))
+        */
+
+        // Level 2
+        /*
+        nameCheck = (name,users) =>{
+            return users.findIndex((user)=>user.name === name)>=0
+        }
+        console.log(nameCheck("Priya",users))
+        */
+        
+
+        // Level 3
+        /*
+        const nameCheck = (name,users) =>{
+            return users.some((user)=>user.name==name)
+        }
+        console.log(nameCheck("Priya",users))
+        */
+
+        //-------------- 2) Adding element to the array------
+        // Level 0
+        /*
+        let arr1 = [0,1,2]
+        let ele = 3
+
+        function addArray(arr1,ele){
+            arr1.push(ele)
+            return arr1
+        }
+        console.log(addArray(arr1,ele))
+        console.log(arr1)
+        */
+
+        // Level 1
+        // without Changing the real array
+        /*
+        let arr1 = [0,1,2]
+        let ele = 3
+
+        function addArray(arr1,ele){
+            return [...arr1,ele]
+        }
+        console.log(addArray(arr1,ele))
+        console.log(arr1)
+        */
+
+        //--------- 3) Remove Dublicate Element in the array----
+        // Level 0
+        /*
+        let arr = [1,2,3,2,4,5,4]
+        let uniqueArr = []
+        for (let i = 0; i < arr.length; i++) {
+            if(!uniqueArr.includes(arr[i])){
+                uniqueArr.push(arr[i])
+            }
+        }
+        console.log(uniqueArr)
+        */
+
+        // Level 1
+        /*
+        let arr = [1,2,3,2,4,5,4]
+        unique = new Set(arr)
+        console.log([...unique])
+        */
+
+        // Level 2
+        /*
+        let arr = [1,2,3,2,4,5,4]
+        function uniqueArray(arr){
+            return arr.reduce((acc,ele)=>{
+                return acc.includes(ele) ? [...acc]:[...acc,ele]
+            },[])
+        }    
+        console.log(uniqueArray(arr)) 
+        */ 
+       
+        //--------- 4) Concanating the Array-----------
+        // Level 0
+        /*
+        let arr1 = [1,2]
+        let arr2 = [3,4,5]
+        const concteArary=(arr1,arr2)=>{
+            arr1.push(...arr2)
+            return arr1
+        }
+        console.log(concteArary(arr1,arr2))
+        */
+
+
+        // Level 1
+        /*
+        let arr1 = [1,2]
+        let arr2 = [3,4,5]
+        const concteArary=(arr1,arr2)=>{
+           return arr1.concat(arr2)
+        }
+        console.log(concteArary(arr1,arr2))
+        console.log(arr1)
+        console.log(arr2)
+        */
+
+        // Level 2
+        /*
+        let arr1 = [1,2]
+        let arr2 = [3,4,5]
+        const concteArary=(arr1,arr2)=>{
+           return [...arr1,...arr2]
+        }
+        console.log(concteArary(arr1,arr2))
+        console.log(arr1)
+        console.log(arr2)
+        */
+    </script>
+</body>
+</html>

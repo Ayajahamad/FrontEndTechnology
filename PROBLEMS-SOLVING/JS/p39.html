@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        #btn{
+            width:96px;
+            height:48px;
+            font-size:24px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="btns">
+    <button id="btn" onclick="c()"><span id="btn1">0</span></button>
+    <button id="btn" onclick="c1()"><span id="btn2">0</span></button>
+    <button id="btn" onclick="c2()"><span id="btn3">0</span></button>
+    </div>
+
+    
+    <script>
+        let btn1 = document.getElementById('btn1')
+        let btn2 = document.getElementById('btn2')
+        let btn3 = document.getElementById('btn3')
+
+        function c(){
+            let a = parseInt(btn1.innerText)
+            btn1.innerText=a+1
+        }
+        function c1(){
+            let a = parseInt(btn2.innerText)
+            btn2.innerText=a+1
+        }
+        function c2(){
+            let a = parseInt(btn3.innerText)
+            btn3.innerText=a+1
+        }
+    </script>
+</body>
+</html>

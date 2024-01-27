@@ -8,12 +8,13 @@
 <body>
     <script>
         function bindMethod(a,b){
-            console.log(this.name) // points to object
+            console.log(this.age) // points to object
             console.log(a+b)
         }
 
         let obj = {
-            name : 'xyz'
+            name : 'xyz',
+            age : 23
         }
 
         let bindedMethod = bindMethod.bind(obj,2,3); // need to access like these
